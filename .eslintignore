@@ -1,0 +1,5 @@
+dist/**
+node_modules/**
+src/assets/**
+static/**
+src/utils/baidu.map.js
