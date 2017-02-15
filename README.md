@@ -1,14 +1,14 @@
 #js-common-tools
 
-关于js相关工具函数及方法
+基于JS ES6 写法相关工具函数
 
 ## Functions
 ### Array
 - ArrayUnique 数组去重
 - ArrayQuickSort 数组排序（快排）
 - isNullOrEmpty
-- isArray
-- getRandomInt
+- isArray 判断是否为数组
+- getRandomInt 获得指定区间的随机整数
 - toFixedDecimal
 - getUniqueId
 - getSafeUniqueId
