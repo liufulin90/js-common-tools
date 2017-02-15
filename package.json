@@ -1,14 +1,14 @@
 {
   "name": "js-common-tools",
-  "version": "1.0.0",
-  "description": "this is javascript tools",
+  "version": "0.0.1",
+  "description": "基于JS ES6 写法相关工具函数",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liufulin90/jstools.git"
+    "url": "git+https://github.com/liufulin90/js-common-tools.git"
   },
   "keywords": [
     "es6",
