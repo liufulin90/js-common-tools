@@ -1,5 +1,5 @@
 {
-  "name": "js-tools",
+  "name": "js-common-tools",
   "version": "1.0.0",
   "description": "this is javascript tools",
   "main": "src/tools/index.js",
@@ -44,12 +44,6 @@
     "karma-jasmine": "^1.1.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.26",
-    "karma-webpack": "^2.0.2",
-    "webpack": "^2.2.1",
-    "webpack-bundle-analyzer": "^2.2.1",
-    "webpack-dev-middleware": "^1.10.0",
-    "webpack-hot-middleware": "^2.16.1",
-    "webpack-merge": "^2.6.1"
   },
   "author": "linxins",
   "license": "ISC",
