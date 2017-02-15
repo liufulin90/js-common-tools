@@ -1,8 +1,8 @@
 {
-  "name": "jstools",
+  "name": "js-tools",
   "version": "1.0.0",
   "description": "this is javascript tools",
-  "main": "index.js",
+  "main": "src/tools/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,7 @@
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-istanbul": "^3.1.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
