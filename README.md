@@ -8,31 +8,36 @@ JS ES6 writing tools based on function
 - ArrayUnique
   
   Array de emphasis<br>
-  eg: arr.ArrayUnique() or ArrayUnique(arr)
+  eg: arr.ArrayUnique() or JSCT.ArrayUnique(arr)
   
 - ArrayQuickSort
 
   Array sort (fast) <br>
-  eg: arr.ArrayQuickSort() or ArrayQuickSort(arr)
+  eg: arr.ArrayQuickSort() or JSCT.ArrayQuickSort(arr)
   
 - isNullOrEmpty
 
+  Checks value if it has value or not. Returns true if it is null or undefined You can do recursive check.<br>
+   * JSCT.isNullOrEmpty([]) => true
+   * JSCT.isNullOrEmpty([""]) => false
+   * JSCT.isNullOrEmpty([""], true) => true (Recursive check)
+   
 - isArray 
 
   To determine whether the array <br>
-  eg: isArray(value)
-  
-- toFixedDecimal
+  eg: JSCT.isArray(value)
 
-- getUniqueId
-
-- getSafeUniqueId
 
 ### Number
 - getRandomInt
 
   To obtain the specified interval of random integers, default 1 to 100 <br>
-  eg: getRandomInt(1, 20)
+  eg: JSCT.getRandomInt(1, 20)
+  
+- toFixedDecimal
+  
+  Returns fixed decimal number<br>
+  eg: JSCT.toFixedDecimal(1.689442324, 2) => 1.68
 
 ### String
 - trimAll 
@@ -48,6 +53,11 @@ JS ES6 writing tools based on function
 - trimR 
   Clear right space in character <br>
   eg: str.trimR()
+  
+- getUUID
+  
+  Return a unique identifier with the given `len`.
+  eg: JSCT.getUUID(20, true) or JSCT.getUUID()
 
 ## Installation
 

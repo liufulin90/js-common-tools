@@ -18,8 +18,11 @@
  * console.log(ArrayUnique(arr))
  */
 const ArrayUnique = (arr = []) => {
-  var o = {}, r = [];
-  for (var i = 0; i < arr.length; i++) {
+  if (arr.constructor !== Array) {
+    throw Error('ArrayUnique param is not a Array');
+  }
+  let o = {}, r = [];
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i].constructor === Object || arr[i].constructor === Array) {
       if (!o[JSON.stringify(arr[i]).toString()]) {
         o[JSON.stringify(arr[i]).toString()] = true;
@@ -36,8 +39,11 @@ const ArrayUnique = (arr = []) => {
 }
 if (!Array.prototype.ArrayUnique) {
   Array.prototype.ArrayUnique = function () {
-    var o = {}, r = [];
-    for (var i = 0; i < this.length; i++) {
+    if (this.constructor !== Array) {
+      throw Error('this is not a Array');
+    }
+    let o = {}, r = [];
+    for (let i = 0; i < this.length; i++) {
       if (this[i].constructor === Object || this[i].constructor === Array) {
         if (!o[JSON.stringify(this[i]).toString()]) {
           o[JSON.stringify(this[i]).toString()] = true;
@@ -69,13 +75,16 @@ if (!Array.prototype.ArrayUnique) {
  * console.log(ArrayQuickSort(arr))
  */
 const ArrayQuickSort = (arr = []) => {
+  if (arr.constructor !== Array) {
+    throw Error('ArrayQuickSort param is not a Array');
+  }
   if (arr.length <= 1) {
     return arr;
   }
-  var pivotIndex = Math.floor(arr.length / 2);
-  var pivot = arr.splice(pivotIndex, 1)[0];
-  var left = [], right = [];
-  for (var i = 0; i < arr.length; i++) {
+  let pivotIndex = Math.floor(arr.length / 2);
+  let pivot = arr.splice(pivotIndex, 1)[0];
+  let left = [], right = [];
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] < pivot) {
       left.push(arr[i]);
     } else {
@@ -86,13 +95,16 @@ const ArrayQuickSort = (arr = []) => {
 }
 if (!Array.prototype.ArrayQuickSort) {
   Array.prototype.ArrayQuickSort = function () {
+    if (arr.constructor !== Array) {
+      throw Error('this is not a Array');
+    }
     if (this.length <= 1) {
       return this;
     }
-    var pivotIndex = Math.floor(this.length / 2);
-    var pivot = this.splice(pivotIndex, 1)[0];
-    var left = [], right = [];
-    for (var i = 0; i < this.length; i++) {
+    let pivotIndex = Math.floor(this.length / 2);
+    let pivot = this.splice(pivotIndex, 1)[0];
+    let left = [], right = [];
+    for (let i = 0; i < this.length; i++) {
       if (this[i] < pivot) {
         left.push(this[i]);
       } else {

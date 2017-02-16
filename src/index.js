@@ -9,14 +9,22 @@ import {
 /**
  * number all tools
  */
-import { getRandomInt } from './number/'
-import { getUUID } from './string/'
+import { getRandomInt, toFixedDecimal } from './number/'
+/**
+ * string all tools
+ */
+import { getUUID, isNullOrEmpty } from './string/'
 
-export {
+/**
+ * include all function to jsct object
+ * @type {{ArrayUnique: ArrayUnique, ArrayQuickSort: ArrayQuickSort, isArray: isArray, getRandomInt: getRandomInt, toFixedDecimal: toFixedDecimal, getUUID: getUUID, isNullOrEmpty: isNullOrEmpty}}
+ */
+const JSCT = {
   ArrayUnique, ArrayQuickSort, isArray,
-  getRandomInt,
-  getUUID
+  getRandomInt, toFixedDecimal,
+  getUUID, isNullOrEmpty
 }
 
+export default JSCT
 
 

@@ -10,33 +10,37 @@ JS ES6 writing tools based on function
 - ArrayUnique
   
   数组去重<br>
-  eg: arr.ArrayUnique() or ArrayUnique(arr)
+  eg: arr.ArrayUnique() or JSCT.ArrayUnique(arr)
   
 - ArrayQuickSort
 
   数组排序（快排） <br>
-  eg: arr.ArrayQuickSort() or ArrayQuickSort(arr)
+  eg: arr.ArrayQuickSort() or JSCT.ArrayQuickSort(arr)
   
 - isNullOrEmpty
 
+  判断是否为空，为空返回true，否则返回false。可以做递归检查<br>
+   * JSCT.isNullOrEmpty([]) => true
+   * JSCT.isNullOrEmpty([""]) => false
+   * JSCT.isNullOrEmpty([""], true) => true (Recursive check)
+   
 - isArray 
 
   判断是否为数组 <br>
   eg: isArray(value)
-  
-- toFixedDecimal
-
-- getUniqueId
-
-- getSafeUniqueId
-
 
 ### Number
 - getRandomInt
 
   获得指定区间的随机整数,默认1至100. <br>
-  eg: getRandomInt(1, 20)
-
+  eg: JSCT.getRandomInt(1, 20)
+  
+- toFixedDecimal
+  
+  返回指定小数位数的十进制，默认两位小数<br>
+  Returns fixed decimal number
+  eg: JSCT.toFixedDecimal(1.689442324, 2) => 1.68
+  
 ### String
 - trimAll 
   
@@ -51,6 +55,11 @@ JS ES6 writing tools based on function
 - trimR 
   清除字符中右边空格 <br>
   eg: str.trimR()
+    
+- getUUID
+  
+  Return a unique identifier with the given `len`.
+  eg: JSCT.getUUID(20, true) or JSCT.getUUID()
   
 ## Installation
 
