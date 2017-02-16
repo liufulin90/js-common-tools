@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+coverage
+dist
+src
+test
+node_modules
+.idea/*

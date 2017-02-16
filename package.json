@@ -1,10 +1,11 @@
 {
   "name": "js-common-tools",
-  "version": "0.0.3",
-  "description": "基于JS ES6 写法相关工具函数",
+  "version": "0.0.4",
+  "description": "JS ES6 writing tools based on function",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub": "babel src -d lib"
   },
   "repository": {
     "type": "git",

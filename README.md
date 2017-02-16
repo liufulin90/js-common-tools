@@ -1,6 +1,9 @@
 #js-common-tools
 
+JS ES6 writing tools based on function
+
 基于JS ES6 写法相关工具函数
+
 
 ## Functions
 ### Array
@@ -27,4 +30,4 @@ $ npm install js-common-tools
 ## License
 (The MIT License)
 
-Copyright (c) 2013 linxins <liufulin90@163.com>
+Copyright (c) 2016 linxins <liufulin90@163.com>
