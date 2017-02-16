@@ -2,24 +2,26 @@
 
 JS ES6 writing tools based on function
 
+基于JS ES6 写法相关工具函数
+
 
 ## Functions
 ### Array
 - ArrayUnique
   
-  Array de emphasis<br>
+  数组去重<br>
   eg: arr.ArrayUnique() or ArrayUnique(arr)
   
 - ArrayQuickSort
 
-  Array sort (fast) <br>
+  数组排序（快排） <br>
   eg: arr.ArrayQuickSort() or ArrayQuickSort(arr)
   
 - isNullOrEmpty
 
 - isArray 
 
-  To determine whether the array <br>
+  判断是否为数组 <br>
   eg: isArray(value)
   
 - toFixedDecimal
@@ -28,27 +30,28 @@ JS ES6 writing tools based on function
 
 - getSafeUniqueId
 
+
 ### Number
 - getRandomInt
 
-  To obtain the specified interval of random integers, default 1 to 100 <br>
+  获得指定区间的随机整数,默认1至100. <br>
   eg: getRandomInt(1, 20)
 
 ### String
 - trimAll 
   
-  Clear all spaces in character <br>
+  清除字符中所有空格 <br>
   eg: str.trimAll()
   
 - trimL 
   
-  Clear left space <br>
+  清除字符中左边空格 <br>
   eg: str.trimL()
   
 - trimR 
-  Clear right space in character <br>
+  清除字符中右边空格 <br>
   eg: str.trimR()
-
+  
 ## Installation
 
 via npm:
