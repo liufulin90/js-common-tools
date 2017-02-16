@@ -13,10 +13,10 @@
  */
 const getRandomInt = (min = 1, max = 100) => {
   if (typeof min !== 'number' || typeof max !== 'number') {
-    throw Error('getRandomInt params is not a number');
+    throw Error('getRandomInt arguments is not a number');
   }
   if (min > max) {
-    throw Error('getRandomInt first param must less than second param');
+    throw Error('getRandomInt first argument must less than second param');
   }
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -33,7 +33,7 @@ const getRandomInt = (min = 1, max = 100) => {
  */
 const toFixedDecimal = (number, precision = 2) => {
   if (typeof number !== 'number') {
-    throw Error('toFixedDecimal first param is not a number');
+    throw Error('toFixedDecimal first argument is not a number');
   }
   let power = Math.pow(10, precision);
   return Math.round(number * power) / power;

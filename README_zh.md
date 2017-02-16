@@ -60,7 +60,29 @@ JS ES6 writing tools based on function
   
   Return a unique identifier with the given `len`.
   eg: JSCT.getUUID(20, true) or JSCT.getUUID()
+
+- sprintf
   
+  把格式数据写成串<br> 
+  eg:<br> 
+  JSCT.sprintf('this values, num1: %s , num2: %s , num3: %s', 1, 2, 3)
+  <br>// this values, num1: 1 , num2: 2 , num3: 3
+       
+- isCreditCard
+  
+  判断是否为信用卡<br>
+  eg: JSCT.isCreditCard('5212345678901234')
+
+- isEmail 
+  
+  判断是否为正确邮箱<br>
+  eg: JSCT.isEmail('liufulin90@163.com')
+ 
+  
+- isUrl 
+  
+  判断死否为url<br>
+  eg: JSCT.isUrl('http://www.linxins.com')
 ## Installation
 
 via npm:

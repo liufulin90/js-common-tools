@@ -19,7 +19,7 @@
  */
 const ArrayUnique = (arr = []) => {
   if (arr.constructor !== Array) {
-    throw Error('ArrayUnique param is not a Array');
+    throw Error('ArrayUnique argument is not a Array');
   }
   let o = {}, r = [];
   for (let i = 0; i < arr.length; i++) {

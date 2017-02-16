@@ -59,6 +59,26 @@ JS ES6 writing tools based on function
   Return a unique identifier with the given `len`.
   eg: JSCT.getUUID(20, true) or JSCT.getUUID()
 
+- sprintf
+  
+  eg:<br> 
+  JSCT.sprintf('this values, num1: %s , num2: %s , num3: %s', 1, 2, 3)
+  <br>// this values, num1: 1 , num2: 2 , num3: 3
+  
+- isCreditCard
+  
+  eg: JSCT.isCreditCard('5212345678901234')
+
+- isEmail 
+  
+  eg: JSCT.isEmail('liufulin90@163.com')
+ 
+  
+- isUrl 
+  
+  eg: JSCT.isUrl('http://www.linxins.com')
+  
+  
 ## Installation
 
 via npm:
