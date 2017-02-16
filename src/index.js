@@ -1,11 +1,7 @@
 /**
  * array all tools
  */
-import {
-  ArrayUnique,
-  ArrayQuickSort,
-  isArray
-} from './array/'
+import { arrayUnique, arrayQuickSort, isArray, inArray } from './array/'
 /**
  * number all tools
  */
@@ -17,10 +13,10 @@ import { getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, sprintf
 
 /**
  * include all function to jsct object
- * @type {{ArrayUnique: ArrayUnique, ArrayQuickSort: ArrayQuickSort, isArray: isArray, getRandomInt: getRandomInt, toFixedDecimal: toFixedDecimal, getUUID: getUUID, isNullOrEmpty: isNullOrEmpty, isString: isString, isCreditCard: isCreditCard, isEmail: isEmail, isUrl: isUrl, sprintf: sprintf}}
+ * @type {{arrayUnique: arrayUnique, ArrayQuickSort: ArrayQuickSort, isArray: isArray, inArray: inArray, getRandomInt: getRandomInt, toFixedDecimal: toFixedDecimal, getUUID: getUUID, isNullOrEmpty: isNullOrEmpty, isString: isString, isCreditCard: isCreditCard, isEmail: isEmail, isUrl: isUrl, sprintf: sprintf}}
  */
 const JSCT = {
-  ArrayUnique, ArrayQuickSort, isArray,
+  arrayUnique, arrayQuickSort, isArray, inArray,
   getRandomInt, toFixedDecimal,
   getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, sprintf
 }

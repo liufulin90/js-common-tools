@@ -5,15 +5,15 @@ JS ES6 writing tools based on function
 
 ## Functions
 ### Array
-- ArrayUnique
+- arrayUnique
   
   Array de emphasis<br>
-  eg: arr.ArrayUnique() or JSCT.ArrayUnique(arr)
+  eg: arr.arrayUnique() or JSCT.arrayUnique(arr)
   
-- ArrayQuickSort
+- arrayQuickSort
 
   Array sort (fast) <br>
-  eg: arr.ArrayQuickSort() or JSCT.ArrayQuickSort(arr)
+  eg: arr.arrayQuickSort() or JSCT.arrayQuickSort(arr)
   
 - isNullOrEmpty
 
@@ -27,6 +27,12 @@ JS ES6 writing tools based on function
   To determine whether the array <br>
   eg: JSCT.isArray(value)
 
+- inArray
+
+  check needle value in array<br>
+  eg: <br>
+     JSCT.inArray(1, ['1', 'ss'], true) // false<br>
+     JSCT.inArray(1, [1, 'ss'], true) // true
 
 ### Number
 - getRandomInt
@@ -51,6 +57,7 @@ JS ES6 writing tools based on function
   eg: str.trimL()
   
 - trimR 
+
   Clear right space in character <br>
   eg: str.trimR()
   

@@ -157,7 +157,7 @@ const isEmail = (value) => {
 }
 
 /**
- * 判断死否为url
+ * 判断是否为url
  *
  * @param value
  * @returns {boolean}

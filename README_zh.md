@@ -7,15 +7,15 @@ JS ES6 writing tools based on function
 
 ## Functions
 ### Array
-- ArrayUnique
+- arrayUnique
   
   数组去重<br>
-  eg: arr.ArrayUnique() or JSCT.ArrayUnique(arr)
+  eg: arr.arrayUnique() or JSCT.arrayUnique(arr)
   
-- ArrayQuickSort
+- arrayQuickSort
 
   数组排序（快排） <br>
-  eg: arr.ArrayQuickSort() or JSCT.ArrayQuickSort(arr)
+  eg: arr.arrayQuickSort() or JSCT.arrayQuickSort(arr)
   
 - isNullOrEmpty
 
@@ -29,6 +29,13 @@ JS ES6 writing tools based on function
   判断是否为数组 <br>
   eg: isArray(value)
 
+- inArray
+
+  判断值是否在数组中<br>
+  eg: <br>
+     JSCT.inArray(1, ['1', 'ss'], true) // false<br>
+     JSCT.inArray(1, [1, 'ss'], true) // true
+     
 ### Number
 - getRandomInt
 
@@ -53,6 +60,7 @@ JS ES6 writing tools based on function
   eg: str.trimL()
   
 - trimR 
+
   清除字符中右边空格 <br>
   eg: str.trimR()
     
@@ -81,7 +89,7 @@ JS ES6 writing tools based on function
   
 - isUrl 
   
-  判断死否为url<br>
+  判断是否为url<br>
   eg: JSCT.isUrl('http://www.linxins.com')
 ## Installation
 

@@ -15,11 +15,11 @@
  * eg:
  * var arr = [5, 3, [8, 8, {b: 1}], 55, [8, 8, {b: 1}], {a: 1}, 3, {a: 1}, 77, 55, 99];
  * console.log(arr)
- * console.log(ArrayUnique(arr))
+ * console.log(arrayUnique(arr))
  */
-const ArrayUnique = (arr = []) => {
+const arrayUnique = (arr = []) => {
   if (arr.constructor !== Array) {
-    throw Error('ArrayUnique argument is not a Array');
+    throw Error('arrayUnique argument is not a Array');
   }
   let o = {}, r = [];
   for (let i = 0; i < arr.length; i++) {
@@ -37,8 +37,8 @@ const ArrayUnique = (arr = []) => {
   }
   return r;
 }
-if (!Array.prototype.ArrayUnique) {
-  Array.prototype.ArrayUnique = function () {
+if (!Array.prototype.arrayUnique) {
+  Array.prototype.arrayUnique = function () {
     if (this.constructor !== Array) {
       throw Error('this is not a Array');
     }
@@ -72,11 +72,14 @@ if (!Array.prototype.ArrayUnique) {
  * eg:
  * var arr = [5, 3, 55, 3,77, 55, 99, 2, 4];
  * console.log(arr);
- * console.log(ArrayQuickSort(arr))
+ * console.log(arrayQuickSort(arr))
  */
-const ArrayQuickSort = (arr = []) => {
-  if (arr.constructor !== Array) {
-    throw Error('ArrayQuickSort param is not a Array');
+const arrayQuickSort = (arr = [], orderBy = 'asc') => {
+  if (!isArray(arr)) {
+    throw Error('arrayQuickSort param is not a Array');
+  }
+  if (!inArray(orderBy, ['asc', 'desc'])) {
+    throw Error('the second argument not in [asc, desc]');
   }
   if (arr.length <= 1) {
     return arr;
@@ -85,18 +88,21 @@ const ArrayQuickSort = (arr = []) => {
   let pivot = arr.splice(pivotIndex, 1)[0];
   let left = [], right = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < pivot) {
-      left.push(arr[i]);
+    if (orderBy == 'asc') {
+      arr[i] < pivot ? left.push(arr[i]) : right.push(arr[i]);
     } else {
-      right.push(arr[i]);
+      arr[i] > pivot ? left.push(arr[i]) : right.push(arr[i]);
     }
   }
-  return ArrayQuickSort(left).concat([pivot], ArrayQuickSort(right));
+  return arrayQuickSort(left, orderBy).concat([pivot], arrayQuickSort(right, orderBy));
 }
-if (!Array.prototype.ArrayQuickSort) {
-  Array.prototype.ArrayQuickSort = function () {
-    if (arr.constructor !== Array) {
+if (!Array.prototype.arrayQuickSort) {
+  Array.prototype.arrayQuickSort = function (orderBy = 'asc') {
+    if (!isArray(this)) {
       throw Error('this is not a Array');
+    }
+    if (!inArray(orderBy, ['asc', 'desc'])) {
+      throw Error('the second argument not in [asc, desc]');
     }
     if (this.length <= 1) {
       return this;
@@ -105,13 +111,13 @@ if (!Array.prototype.ArrayQuickSort) {
     let pivot = this.splice(pivotIndex, 1)[0];
     let left = [], right = [];
     for (let i = 0; i < this.length; i++) {
-      if (this[i] < pivot) {
-        left.push(this[i]);
+      if (orderBy == 'asc') {
+        this[i] < pivot ? left.push(this[i]) : right.push(this[i]);
       } else {
-        right.push(this[i]);
+        this[i] > pivot ? left.push(this[i]) : right.push(this[i]);
       }
     }
-    return left.ArrayQuickSort().concat([pivot], right.ArrayQuickSort());
+    return left.arrayQuickSort(orderBy).concat([pivot], right.arrayQuickSort(orderBy));
   }
 }
 /**
@@ -124,11 +130,35 @@ if (!Array.prototype.ArrayQuickSort) {
  * @return {Boolean}
  */
 const isArray = (v) => {
-  return v instanceof Array || Object.prototype.toString.call(v) == '[object Array]';
+  return v instanceof Array || v.constructor === Array || Object.prototype.toString.call(v) == '[object Array]';
+}
+
+/**
+ * 判断值是否在数组中
+ *
+ * @param needle 被判断的值
+ * @param haystack 数组
+ * @param strict： 严格模式true，非严格false
+ * @returns {boolean}
+ */
+const inArray = (needle, haystack, strict = false) => {
+  if (!isArray(haystack)) {
+    throw Error('the second argument is not a Array');
+  }
+  let len = haystack.length;
+  for (let i = 0; i < len; i++) {
+    if (strict === true) {
+      if (haystack[i] === needle) return true;
+    } else {
+      if (haystack[i] == needle) return true;
+    }
+  }
+  return false;
 }
 
 export {
-  ArrayUnique,
-  ArrayQuickSort,
-  isArray
+  arrayUnique,
+  arrayQuickSort,
+  isArray,
+  inArray
 }

@@ -1,6 +1,6 @@
 {
   "name": "js-common-tools",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "JS ES6 writing tools based on function",
   "main": "lib/index.js",
   "scripts": {
