@@ -2,12 +2,9 @@
   "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "node": true,
-    "jquery": true
+    "node": true
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": [],
   "globals": {
     "__DEV__": true,
     "__PROD__": true,
