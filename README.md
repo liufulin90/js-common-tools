@@ -68,8 +68,7 @@ JS ES6 writing tools based on function
 
 - sprintf
   
-  eg:<br> 
-  JSCT.sprintf('this values, num1: %s , num2: %s , num3: %s', 1, 2, 3)
+  eg:JSCT.sprintf('this values, num1: %s , num2: %s , num3: %s', 1, 2, 3)
   <br>// this values, num1: 1 , num2: 2 , num3: 3
   
 - isCreditCard
@@ -85,9 +84,7 @@ JS ES6 writing tools based on function
   
   eg: JSCT.isUrl('http://www.linxins.com')
   
-- isIdentityCard
-
-    
+ 
 - isIdentityCard
 
   To determine whether the Chinese identity card number<br>

@@ -66,14 +66,13 @@ JS ES6 writing tools based on function
     
 - getUUID
   
-  Return a unique identifier with the given `len`.
+  Return a unique identifier with the given `len`.<br> 
   eg: JSCT.getUUID(20, true) or JSCT.getUUID()
 
 - sprintf
   
   把格式数据写成串<br> 
-  eg:<br> 
-  JSCT.sprintf('this values, num1: %s , num2: %s , num3: %s', 1, 2, 3)
+  eg: JSCT.sprintf('this values, num1: %s , num2: %s , num3: %s', 1, 2, 3)
   <br>// this values, num1: 1 , num2: 2 , num3: 3
        
 - isCreditCard
