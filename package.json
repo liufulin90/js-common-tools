@@ -5,7 +5,10 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub": "babel src -d lib"
+    "p": "babel src -d lib",
+    "c": "eslint src",
+    "ccp": "eslint src && rm -rf ./lib/* && babel src -d lib",
+    "clear": "rm -rf ./lib/*"
   },
   "repository": {
     "type": "git",

@@ -91,6 +91,14 @@ JS ES6 writing tools based on function
   
   判断是否为url<br>
   eg: JSCT.isUrl('http://www.linxins.com')
+  
+- isIdentityCard
+
+  判断是否为身份证号码<br>
+  eg: JSCT.isIdentityCard('231421199406042025') // false<br>
+  ps: 输入自己的身份证号做测试，返回为true
+  
+  
 ## Installation
 
 via npm:

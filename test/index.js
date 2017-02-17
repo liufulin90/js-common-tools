@@ -39,4 +39,7 @@ import JSCT from '../src/'
 // console.log(JSCT.isEmail('liufulin90@163.com'))
 // console.log(JSCT.isUrl('http://www.linxins.com'))
 
-console.log(JSCT.inArray(1, [2,3]))
+// console.log(JSCT.inArray(1, [2,3]))
+
+// console.log(JSCT.isIdentityCard('511324199010154310'))
+console.log(JSCT.isIdentityCard('231421199406042028'))

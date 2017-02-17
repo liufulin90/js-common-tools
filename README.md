@@ -85,6 +85,16 @@ JS ES6 writing tools based on function
   
   eg: JSCT.isUrl('http://www.linxins.com')
   
+- isIdentityCard
+
+    
+- isIdentityCard
+
+  To determine whether the Chinese identity card number<br>
+  eg: JSCT.isIdentityCard('231421199406042028') // false<br>
+  ps: Enter the Chinese identity card number to do the test, return to true
+
+    
   
 ## Installation
 
