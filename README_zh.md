@@ -15,7 +15,8 @@ JS ES6 writing tools based on function
 - arrayQuickSort
 
   数组排序（快排） <br>
-  eg: arr.arrayQuickSort() or JSCT.arrayQuickSort(arr)
+  eg: arr.arrayQuickSort('desc') or JSCT.arrayQuickSort(arr, 'desc')<br>
+  'asc': 升序(默认)  'desc': 降序
   
 - isNullOrEmpty
 

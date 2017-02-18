@@ -42,4 +42,7 @@ import JSCT from '../src/'
 // console.log(JSCT.inArray(1, [2,3]))
 
 // console.log(JSCT.isIdentityCard('511324199010154310'))
-console.log(JSCT.isIdentityCard('231421199406042028'))
+// console.log(JSCT.isIdentityCard('231421199406042028'))
+
+var arr = [5, 3, 55, 3,77, 55, 99, 2, 4];
+console.log(JSCT.arrayQuickSort(arr, 'desc'))

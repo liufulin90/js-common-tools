@@ -13,7 +13,9 @@ JS ES6 writing tools based on function
 - arrayQuickSort
 
   Array sort (fast) <br>
-  eg: arr.arrayQuickSort() or JSCT.arrayQuickSort(arr)
+  eg: arr.arrayQuickSort('desc') or JSCT.arrayQuickSort(arr, 'desc')<br>
+  'asc': Ascending (default) <br>
+  'desc': Descending
   
 - isNullOrEmpty
 
