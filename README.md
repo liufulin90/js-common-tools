@@ -95,7 +95,8 @@ JS ES6 writing tools based on function
 
 ### Other
 - cookie
-   get and set cookie
+
+   get and set cookie<br>
    eg:<br>
    set: JSCT.cookie('test', '123')<br>
    get: JSCT.cookie('test')<br>

@@ -101,7 +101,8 @@ JS ES6 writing tools based on function
   
 ### Other
 - cookie
-   获取cookie和设置cookie
+
+   获取cookie和设置cookie<br>
    eg:<br>
    set: JSCT.cookie('test', '123')<br>
    get: JSCT.cookie('test')<br>
