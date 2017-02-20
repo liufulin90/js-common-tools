@@ -1,6 +1,6 @@
 {
   "name": "js-common-tools",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "JS ES6 writing tools based on function",
   "main": "lib/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "keywords": [
     "es6",
-    "tools"
+    "js functon tools"
   ],
   "devDependencies": {
     "babel-core": "^6.22.1",

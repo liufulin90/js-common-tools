@@ -93,7 +93,12 @@ JS ES6 writing tools based on function
   eg: JSCT.isIdentityCard('231421199406042028') // false<br>
   ps: Enter the Chinese identity card number to do the test, return to true
 
-    
+### Other
+- cookie
+   get and set cookie
+   eg:<br>
+   set: JSCT.cookie('test', '123')<br>
+   get: JSCT.cookie('test')<br>
   
 ## Installation
 
