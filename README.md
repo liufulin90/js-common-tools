@@ -8,19 +8,14 @@ JS ES6 writing tools based on function
 - arrayUnique
   
   Array de emphasis<br>
-  ```javascript
-  arr.arrayUnique() 
-  JSCT.arrayUnique(arr)
-  ```
+  eg: arr.arrayUnique() or JSCT.arrayUnique(arr)
+  
 - arrayQuickSort
 
   Array sort (fast) <br>
-  ```javascript
-  arr.arrayQuickSort('desc') 
-  JSCT.arrayQuickSort(arr, 'desc')
-  // 'asc': Ascending (default)
-  // 'desc': Descending
-  ```
+  eg: arr.arrayQuickSort('desc') or JSCT.arrayQuickSort(arr, 'desc')<br>
+  'asc': Ascending (default) <br>
+  'desc': Descending
   
 - isNullOrEmpty
 
