@@ -22,7 +22,7 @@ import JSCT from '../src/'
  console.log(JSCT.ArrayQuickSort([5, 3, 55, 3,77, 55, 99, 2, 4]))*/
 
 // console.log(isNullOrEmpty([' '], true))
-// console.log(JSCT.getRandomInt(9, 6))
+// console.log(JSCT.getRandomInt(9, 15))
 /*
  var str = '  asdf   jjj  ';
  console.log(str)
@@ -48,5 +48,5 @@ import JSCT from '../src/'
 // console.log(JSCT.arrayQuickSort(arr, 'desc'))
 
 // console.log(JSCT.cookie('test', '123'))
-console.log(Array.from(Array(100).keys()) )
-console.log([...Array(100).keys()])
+// console.log(Array.from(Array(100).keys()) )
+// console.log([...Array(100).keys()])
