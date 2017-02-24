@@ -47,4 +47,6 @@ import JSCT from '../src/'
 // var arr = [5, 3, 55, 3,77, 55, 99, 2, 4];
 // console.log(JSCT.arrayQuickSort(arr, 'desc'))
 
-console.log(JSCT.cookie('test', '123'))
+// console.log(JSCT.cookie('test', '123'))
+console.log(Array.from(Array(100).keys()) )
+console.log([...Array(100).keys()])
