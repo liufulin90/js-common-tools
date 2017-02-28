@@ -106,7 +106,16 @@ JS ES6 writing tools based on function
    eg:<br>
    set: JSCT.cookie('test', '123')<br>
    get: JSCT.cookie('test')<br>
+
+- store
+   
+   本地存储（localstorage , sessionStorage）
+   <br>JSCT.getLocalStorage(key)
+   <br>JSCT.setLocalStorage(key, value)
+   <br>JSCT.getSessionStorage(key)
+   <br>JSCT.setSessionStorage(key, value)
   
+    
 ## Installation
 
 via npm:
