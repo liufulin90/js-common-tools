@@ -1,7 +1,7 @@
 /**
  * Created by liufulin on 17-2-15.
  */
-import JSCT from '../src/'
+import * as JSCT from '../src/'
 
 
 /*var arr = [5, 3, [8, 8, {b: 1}], 55, [8, 8, {b: 1}], {a: 1}, 3, {a: 1}, 77, 55, 99];
@@ -50,3 +50,11 @@ import JSCT from '../src/'
 // console.log(JSCT.cookie('test', '123'))
 // console.log(Array.from(Array(100).keys()) )
 // console.log([...Array(100).keys()])
+
+let tt = new JSCT.Timer()
+tt.start(function (timeStr) {
+  console.log(timeStr)
+})
+setTimeout(()=>{
+  tt.stop()
+}, 3000)
