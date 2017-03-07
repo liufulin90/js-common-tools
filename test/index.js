@@ -51,10 +51,17 @@ import * as JSCT from '../src/'
 // console.log(Array.from(Array(100).keys()) )
 // console.log([...Array(100).keys()])
 
-let tt = new JSCT.Timer()
-tt.start(function (timeStr) {
-  console.log(timeStr)
-})
-setTimeout(()=>{
-  tt.stop()
-}, 3000)
+// let tt = new JSCT.Timer()
+// tt.start(function (timeStr) {
+//   console.log(timeStr)
+// })
+// setTimeout(()=>{
+//   tt.stop()
+// }, 3000)
+
+const testAsync = async () => {
+  console.log(1)
+  await JSCT.sleep(2000)
+  console.log(2)
+}
+testAsync()

@@ -6,7 +6,7 @@ JS ES6 writing tools based on function
 ## Functions
 
 ```javascript
-import * as JSCT from 'js-common-tools'
+  import * as JSCT from 'js-common-tools'
 ```
 
 ### Array
@@ -158,13 +158,25 @@ import * as JSCT from 'js-common-tools'
     tt.stop()
   }, 3000)
 ```
+
+- sleep
+
+  利用async/await做睡眠延迟sleep后面的代码执行
+```javascript
+  const testAsync = async () => {
+    console.log(1)
+    await JSCT.sleep(2000)
+    console.log(2) // 2 seconds after show 2
+  }
+  testAsync()
+```
   
 ## Installation
 
 via npm:
 
 ```bash
-$ npm install js-common-tools
+  $ npm install js-common-tools
 ```
 
 ## License

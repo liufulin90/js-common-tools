@@ -14,6 +14,7 @@ import {getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isIdenti
 import {cookie} from './cookie/'
 import {getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage} from './store/'
 import {Timer} from './date/'
+import {sleep} from './other/'
 /**
  * include all function to jsct object
  * @type {{arrayUnique: arrayUnique, arrayQuickSort: arrayQuickSort, isArray: isArray, inArray: inArray, getRandomInt: getRandomInt, toFixedDecimal: toFixedDecimal, getUUID: getUUID, isNullOrEmpty: isNullOrEmpty, isString: isString, isCreditCard: isCreditCard, isEmail: isEmail, isUrl: isUrl, isIdentityCard: isIdentityCard, sprintf: sprintf, cookie: cookie, getLocalStorage: getLocalStorage, setLocalStorage: setLocalStorage, getSessionStorage: getSessionStorage, setSessionStorage: setSessionStorage, Timer: Timer}}
@@ -33,5 +34,6 @@ export {
   getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isIdentityCard, sprintf,
   cookie,
   getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
-  Timer
+  Timer,
+  sleep
 }
