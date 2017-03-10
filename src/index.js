@@ -13,7 +13,7 @@ import {getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isIdenti
 
 import {cookie} from './cookie/'
 import {getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage} from './store/'
-import {Timer} from './date/'
+import {Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp} from './date/'
 import {sleep} from './other/'
 /**
  * include all function to jsct object
@@ -34,6 +34,6 @@ export {
   getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isIdentityCard, sprintf,
   cookie,
   getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
-  Timer,
+  Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp,
   sleep
 }

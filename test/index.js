@@ -59,9 +59,11 @@ import * as JSCT from '../src/'
 //   tt.stop()
 // }, 3000)
 
-const testAsync = async () => {
-  console.log(1)
-  await JSCT.sleep(2000)
-  console.log(2)
-}
-testAsync()
+// const testAsync = async () => {
+//   console.log(1)
+//   await JSCT.sleep(2000)
+//   console.log(2)
+// }
+// testAsync()
+
+console.log(JSCT.timestampFormat(1489142869000))
