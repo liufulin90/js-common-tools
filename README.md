@@ -161,7 +161,7 @@ JS ES6 writing tools based on function
 
 - sleep
 
-  利用async/await做睡眠延迟sleep后面的代码执行
+  Use async/await to do the code behind the sleep delay sleep
 ```javascript
   const testAsync = async () => {
     console.log(1)
@@ -170,7 +170,29 @@ JS ES6 writing tools based on function
   }
   testAsync()
 ```
-  
+
+
+- getNowTimeFormat
+
+  Gets the formatted date of the current time
+```javascript
+  JSCT.getNowTimeFormat() // 2017-03-12 17:30:45
+````
+
+- timestampFormat
+
+  Format timestamp
+```javascript
+  JSCT.timestampFormat(1489142869000) // 2017-03-10 18:47:49
+````
+
+- dateStr2timestamp
+
+  Character channeling to timestamp   
+```javascript
+  JSCT.dateStr2timestamp('2016-06-16 16:15:59') // 1466064959000
+````
+1
 ## Installation
 
 via npm:

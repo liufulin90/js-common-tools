@@ -173,7 +173,27 @@ JS ES6 writing tools based on function
   }
   testAsync()
 ```
-    
+
+- getNowTimeFormat
+
+  获取当前时间的格式化日期
+```javascript
+  JSCT.getNowTimeFormat() // 2017-03-12 17:30:45
+````
+
+- timestampFormat
+  将时间戳格式化
+```javascript
+  JSCT.timestampFormat(1489142869000) // 2017-03-10 18:47:49
+````
+
+- dateStr2timestamp
+
+  时间字符串转时间戳   
+```javascript
+  JSCT.dateStr2timestamp('2016-06-16 16:15:59') // 1466064959000
+````
+
 ## Installation
 
 via npm:

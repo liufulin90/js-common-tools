@@ -66,4 +66,6 @@ import * as JSCT from '../src/'
 // }
 // testAsync()
 
+console.log(JSCT.getNowTimeFormat())
 console.log(JSCT.timestampFormat(1489142869000))
+console.log(JSCT.dateStr2timestamp('2016-06-16 16:15:59'))
