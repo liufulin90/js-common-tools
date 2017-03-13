@@ -6,3 +6,5 @@ src
 test
 node_modules
 .idea/*
+.eslintignore
+index.html
