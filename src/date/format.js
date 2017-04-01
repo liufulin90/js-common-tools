@@ -10,10 +10,6 @@ import {isNullOrEmpty} from '../string/'
  * @returns {string}
  */
 function timeFormat (timestamp, Fmt, hasZero) {
-  var timestampLen = timestamp.toString().length
-  if (timestampLen != 10 && timestampLen != 13) {
-    throw new Error('timestamp length is 10 or 13')
-  }
   var date = (typeof timestamp != 'undefined' && timestamp != '') ? new Date(timestamp.toString().length == 10 ? Number(timestamp + '000') : timestamp) : new Date()
   hasZero = (typeof hasZero === 'boolean') ? hasZero : true
   var Y = date.getFullYear()
