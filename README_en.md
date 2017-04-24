@@ -2,8 +2,6 @@
 
 JS ES6 writing tools based on function
 
-基于JS ES6 写法相关工具函数
-
 
 ## Functions
 
@@ -14,15 +12,17 @@ JS ES6 writing tools based on function
 ### Array
 - arrayUnique
   
-  数组去重<br>
+  Array de emphasis<br>
 ```javascript
   arr.arrayUnique()
   JSCT.arrayUnique(arr)
 ```  
+  
 - arrayQuickSort
 
-  数组排序（快排） <br>
-  'asc': 升序(默认)  'desc': 降序
+  Array sort (fast) <br>
+  'asc': Ascending (default) <br>
+  'desc': Descending
 ```javascript
    arr.arrayQuickSort('desc') 
    JSCT.arrayQuickSort(arr, 'desc')
@@ -30,108 +30,106 @@ JS ES6 writing tools based on function
   
 - isNullOrEmpty
 
-  判断是否为空，为空返回true，否则返回false。可以做递归检查<br>
+  Checks value if it has value or not. Returns true if it is null or undefined You can do recursive check.<br>
 ```javascript
    JSCT.isNullOrEmpty([]) // true
    JSCT.isNullOrEmpty([""]) // false
    JSCT.isNullOrEmpty([""], true) // true (Recursive check)
-```   
+```    
 - isArray 
 
-  判断是否为数组 <br>
+  To determine whether the array <br>
 ```javascript
    JSCT.isArray(value)
 ```
 
 - inArray
 
-  判断值是否在数组中<br>
+  check needle value in array<br>
 ```javascript
   JSCT.inArray(1, ['1', 'ss'], true) // false
   JSCT.inArray(1, [1, 'ss'], true) // true
 ```
-     
-     
+
 ### Number
 - getRandomInt
 
-  获得指定区间的随机整数,默认1至100. <br>
+  To obtain the specified interval of random integers, default 1 to 100 <br>
 ```javascript
    JSCT.getRandomInt(1, 20)
 ```
   
 - toFixedDecimal
   
-  返回指定小数位数的十进制，默认两位小数<br>
+  Returns fixed decimal number<br>
 ```javascript
   JSCT.toFixedDecimal(1.689442324, 2) // 1.68
 ```
-  
+
 ### String
 - trimAll 
   
-  清除字符中所有空格 <br>
+  Clear all spaces in character <br>
 ```javascript
   str.trimAll()
 ```
   
 - trimL 
   
-  清除字符中左边空格 <br>
+  Clear left space <br>
 ```javascript
   str.trimL()
-```  
+``` 
 - trimR 
 
-  清除字符中右边空格 <br>
+  Clear right space in character <br>
 ```javascript
   str.trimR()
-```  
-    
+``` 
 - getUUID
   
-  Return a unique identifier with the given `len`.<br> 
+  Return a unique identifier with the given len.<br>
 ```javascript
   JSCT.getUUID(20, true) or JSCT.getUUID()
-``` 
+```
+
 - sprintf
   
-  把格式数据写成串<br> 
 ```javascript
   JSCT.sprintf('this values, num1: %s , num2: %s , num3: %s', 1, 2, 3)
   // this values, num1: 1 , num2: 2 , num3: 3
-```        
+```
 - isCreditCard
   
-  判断是否为信用卡<br>
 ```javascript
   JSCT.isCreditCard('5212345678901234') // true
-````
+```
+
 - isEmail 
   
-  判断是否为正确邮箱<br>
 ```javascript
   JSCT.isEmail('liufulin90@163.com') // true
 ``` 
+ 
   
 - isUrl 
   
-  判断是否为url<br>
 ```javascript
   JSCT.isUrl('http://www.linxins.com') // true
 ```  
+  
+ 
 - isIdentityCard
 
-  判断是否为身份证号码<br>
+  To determine whether the Chinese identity card number<br>
 ```javascript
   JSCT.isIdentityCard('231421199406042025') // false
-  // ps: 输入自己的身份证号做测试，返回为true
+  // ps: Enter the Chinese identity card number to do the test, return to true
 ```
-  
 ### Other
 - cookie
 
-   获取cookie和设置cookie<br>
+   get and set cookie<br>
 ```javascript
   // set 
   JSCT.cookie('test', '123')
@@ -141,17 +139,16 @@ JS ES6 writing tools based on function
 
 - store
    
-   本地存储（localstorage , sessionStorage）
 ```javascript
    JSCT.getLocalStorage(key)
    JSCT.setLocalStorage(key, value)
    JSCT.getSessionStorage(key)
    JSCT.setSessionStorage(key, value)
-```  
-
+``` 
+  
 - Timer
 
-  这是一个计时器工具
+  This is a timer tool
 ```javascript
   let tt = new JSCT.Timer()
   tt.start(function (timeStr) {
@@ -160,40 +157,42 @@ JS ES6 writing tools based on function
   setTimeout(()=>{
     tt.stop()
   }, 3000)
-```  
+```
 
 - sleep
 
-  利用async/await做睡眠延迟sleep后面的代码执行
+  Use async/await to do the code behind the sleep delay sleep
 ```javascript
   const testAsync = async () => {
     console.log(1)
     await JSCT.sleep(2000)
-    console.log(2) // 两秒后显示 2
+    console.log(2) // 2 seconds after show 2
   }
   testAsync()
 ```
 
+
 - getNowTimeFormat
 
-  获取当前时间的格式化日期
+  Gets the formatted date of the current time
 ```javascript
   JSCT.getNowTimeFormat() // 2017-03-12 17:30:45
 ````
 
 - timestampFormat
-  将时间戳格式化
+
+  Format timestamp
 ```javascript
   JSCT.timestampFormat(1489142869000) // 2017-03-10 18:47:49
 ````
 
 - dateStr2timestamp
 
-  时间字符串转时间戳   
+  Character channeling to timestamp   
 ```javascript
   JSCT.dateStr2timestamp('2016-06-16 16:15:59') // 1466064959000
 ````
-
+1
 ## Installation
 
 via npm:
