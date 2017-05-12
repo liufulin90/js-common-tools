@@ -58,11 +58,11 @@ function timeFormat (timestamp, Fmt, hasZero) {
  * @returns {string}
  */
 const getNowTimeFormat = (Fmt = 'Y-m-d H:i:s', hasZero = true) => {
-  return timeFormat('', Fmt, hasZero)
+  return timeFormat(new Date().getTime(), Fmt, hasZero)
 }
 /**
  * 将时间戳格式化
- * @param number timestamp  eg:1465963958000 length:13
+ * @param number timestamp  eg:1465963958000 length:13   or  1465963958 length:10
  * @param string Fmt  eg:Y-m-d H:i:s
  * @param boolean hasZero  eg:true|false
  * @returns {string}

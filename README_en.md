@@ -117,7 +117,14 @@ JS ES6 writing tools based on function
 ```javascript
   JSCT.isUrl('http://www.linxins.com') // true
 ```  
+ 
+- isPhone 
   
+  判断是否为手机号 
+```javascript
+   JSCT.isPhone('18785465548') // true
+   JSCT.isPhone('12785465548') // false
+```
  
 - isIdentityCard
 
@@ -131,10 +138,12 @@ JS ES6 writing tools based on function
 
    get and set cookie<br>
 ```javascript
-  // set 
-  JSCT.cookie('test', '123')
+  // set
+  JSCT.cookie('test', '123', 7*24*60*60) //key: test, value:123, expires: 7*24*60*60
   // get
   JSCT.cookie('test') // 123
+  // remove
+    JSCT.remove('test') // key: test
 ```
 
 - store
@@ -192,7 +201,7 @@ JS ES6 writing tools based on function
 ```javascript
   JSCT.dateStr2timestamp('2016-06-16 16:15:59') // 1466064959000
 ````
-1
+
 ## Installation
 
 via npm:

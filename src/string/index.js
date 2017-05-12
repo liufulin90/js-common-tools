@@ -169,6 +169,20 @@ const isUrl = (value) => {
 }
 
 /**
+ * 判断是否为手机号
+ *
+ * JSCT.isPhone('18785465548') // true
+ * JSCT.isPhone('12785465548') // false
+ *
+ * @param value
+ * @returns {boolean}
+ */
+const isPhone = (value) => {
+  let reg = /^1[34578]\d{9}$/;
+  return reg.test(value);
+}
+
+/**
  * 判断是否为身份证号码
  * @param sId
  * @returns {boolean}
@@ -244,6 +258,7 @@ export {
   isCreditCard,
   isEmail,
   isUrl,
+  isPhone,
   isIdentityCard,
   sprintf
 }

@@ -119,7 +119,16 @@ JS ES6 writing tools based on function
   判断是否为url<br>
 ```javascript
   JSCT.isUrl('http://www.linxins.com') // true
+```   
+ 
+- isPhone 
+  
+  判断是否为手机号
+```javascript
+   JSCT.isPhone('18785465548') // true
+   JSCT.isPhone('12785465548') // false
 ```  
+
 - isIdentityCard
 
   判断是否为身份证号码<br>
@@ -133,10 +142,12 @@ JS ES6 writing tools based on function
 
    获取cookie和设置cookie<br>
 ```javascript
-  // set 
-  JSCT.cookie('test', '123')
-  // get
+  // 设置 
+  JSCT.cookie('test', '123', 7*24*60*60) // 将(123)存入cookie，键为'test',有效期为7天
+  // 获取
   JSCT.cookie('test') // 123
+  // 删除
+    JSCT.remove('test') // 将键为‘test’的cookie值删除掉
 ```
 
 - store
@@ -196,7 +207,7 @@ JS ES6 writing tools based on function
 
 ## Installation
 
-via npm:
+通过npm安装:
 
 ```bash
   $ npm install js-common-tools

@@ -9,7 +9,7 @@ import {getRandomInt, toFixedDecimal} from './number/'
 /**
  * string all tools
  */
-import {getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isIdentityCard, sprintf} from './string/'
+import {getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf} from './string/'
 
 import {cookie} from './cookie/'
 import {getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage} from './store/'
@@ -31,7 +31,7 @@ import {sleep} from './other/'
 export {
   arrayUnique, arrayQuickSort, isArray, inArray,
   getRandomInt, toFixedDecimal,
-  getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isIdentityCard, sprintf,
+  getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
   cookie,
   getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
   Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp,
