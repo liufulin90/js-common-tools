@@ -1,4 +1,4 @@
-#js-common-tools
+# js-common-tools
 
 JS ES6 writing tools based on function
 
@@ -10,7 +10,7 @@ JS ES6 writing tools based on function
 ```
 
 ### Array
-- arrayUnique
+> arrayUnique
   
   Array de emphasis<br>
 ```javascript
@@ -18,7 +18,7 @@ JS ES6 writing tools based on function
   JSCT.arrayUnique(arr)
 ```  
   
-- arrayQuickSort
+> arrayQuickSort
 
   Array sort (fast) <br>
   'asc': Ascending (default) <br>
@@ -28,7 +28,7 @@ JS ES6 writing tools based on function
    JSCT.arrayQuickSort(arr, 'desc')
 ```
   
-- isNullOrEmpty
+> isNullOrEmpty
 
   Checks value if it has value or not. Returns true if it is null or undefined You can do recursive check.<br>
 ```javascript
@@ -36,14 +36,14 @@ JS ES6 writing tools based on function
    JSCT.isNullOrEmpty([""]) // false
    JSCT.isNullOrEmpty([""], true) // true (Recursive check)
 ```    
-- isArray 
+> isArray 
 
   To determine whether the array <br>
 ```javascript
    JSCT.isArray(value)
 ```
 
-- inArray
+> inArray
 
   check needle value in array<br>
 ```javascript
@@ -52,14 +52,14 @@ JS ES6 writing tools based on function
 ```
 
 ### Number
-- getRandomInt
+> getRandomInt
 
   To obtain the specified interval of random integers, default 1 to 100 <br>
 ```javascript
    JSCT.getRandomInt(1, 20)
 ```
   
-- toFixedDecimal
+> toFixedDecimal
   
   Returns fixed decimal number<br>
 ```javascript
@@ -67,58 +67,58 @@ JS ES6 writing tools based on function
 ```
 
 ### String
-- trimAll 
+> trimAll 
   
   Clear all spaces in character <br>
 ```javascript
   str.trimAll()
 ```
   
-- trimL 
+> trimL 
   
   Clear left space <br>
 ```javascript
   str.trimL()
 ``` 
-- trimR 
+> trimR 
 
   Clear right space in character <br>
 ```javascript
   str.trimR()
 ``` 
-- getUUID
+> getUUID
   
   Return a unique identifier with the given len.<br>
 ```javascript
   JSCT.getUUID(20, true) or JSCT.getUUID()
 ```
 
-- sprintf
+> sprintf
   
 ```javascript
   JSCT.sprintf('this values, num1: %s , num2: %s , num3: %s', 1, 2, 3)
   // this values, num1: 1 , num2: 2 , num3: 3
 ```
-- isCreditCard
+> isCreditCard
   
 ```javascript
   JSCT.isCreditCard('5212345678901234') // true
 ```
 
-- isEmail 
+> isEmail 
   
 ```javascript
   JSCT.isEmail('liufulin90@163.com') // true
 ``` 
  
   
-- isUrl 
+> isUrl 
   
 ```javascript
   JSCT.isUrl('http://www.linxins.com') // true
 ```  
  
-- isPhone 
+> isPhone 
   
   判断是否为手机号 
 ```javascript
@@ -126,7 +126,7 @@ JS ES6 writing tools based on function
    JSCT.isPhone('12785465548') // false
 ```
  
-- isIdentityCard
+> isIdentityCard
 
   To determine whether the Chinese identity card number<br>
 ```javascript
@@ -134,7 +134,7 @@ JS ES6 writing tools based on function
   // ps: Enter the Chinese identity card number to do the test, return to true
 ```
 ### Other
-- cookie
+> cookie
 
    get and set cookie<br>
 ```javascript
@@ -146,7 +146,7 @@ JS ES6 writing tools based on function
     JSCT.remove('test') // key: test
 ```
 
-- store
+> store
    
 ```javascript
    JSCT.getLocalStorage(key)
@@ -155,7 +155,7 @@ JS ES6 writing tools based on function
    JSCT.setSessionStorage(key, value)
 ``` 
   
-- Timer
+> Timer
 
   This is a timer tool
 ```javascript
@@ -168,7 +168,7 @@ JS ES6 writing tools based on function
   }, 3000)
 ```
 
-- sleep
+> sleep
 
   Use async/await to do the code behind the sleep delay sleep
 ```javascript
@@ -181,21 +181,21 @@ JS ES6 writing tools based on function
 ```
 
 
-- getNowTimeFormat
+> getNowTimeFormat
 
   Gets the formatted date of the current time
 ```javascript
   JSCT.getNowTimeFormat() // 2017-03-12 17:30:45
 ````
 
-- timestampFormat
+> timestampFormat
 
   Format timestamp
 ```javascript
   JSCT.timestampFormat(1489142869000) // 2017-03-10 18:47:49
 ````
 
-- dateStr2timestamp
+> dateStr2timestamp
 
   Character channeling to timestamp   
 ```javascript
