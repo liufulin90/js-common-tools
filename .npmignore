@@ -7,4 +7,5 @@ test
 node_modules
 .idea/*
 .eslintignore
+webpack.config.js
 index.html
