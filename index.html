@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <script src="lib/index.js"></script>
+    <script src="lib/js-common-tools.0.1.7.js"></script>
 </head>
 <body>
+
+<input type="file" id="uploader"/>
+<input type="submit" id="submit" onclick="check()"/>
+
 <script>
-    setLocalStorage('testlocal', 'testlocal')
-    console.log(getLocalStorage('testlocal'))
+function check () {
+    var fileEl = document.getElementById('uploader');
+    JSCT.getImageWidthHeight([fileEl], function (width, height) {
+        console.log(JSCT.sprintf('width: %s, height: %s', width, height))
+    })
+}
+
+JSCT.setLocalStorage('testlocal', 'testlocal')
+console.log(JSCT.getLocalStorage('testlocal'))
 </script>
 </body>
 </html>

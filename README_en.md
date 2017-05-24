@@ -202,6 +202,22 @@ JS ES6 writing tools based on function
   JSCT.dateStr2timestamp('2016-06-16 16:15:59') // 1466064959000
 ````
 
+> getImageWidthHeight
+
+  get images width and height   
+```html
+<input type="file" id="uploader"/>
+<input type="submit" id="submit" onclick="check()"/>
+```
+```javascript
+function check () {
+    var fileEl = document.getElementById('uploader');
+    JSCT.getImageWidthHeight([fileEl], function (width, height) {
+        console.log(JSCT.sprintf('width: %s, height: %s', width, height))
+    })
+}
+````
+
 ## Installation
 
 via npm:

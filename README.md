@@ -216,6 +216,22 @@ JSCT.timestampFormat(1489142869000) // 2017-03-10 18:47:49
 JSCT.dateStr2timestamp('2016-06-16 16:15:59') // 1466064959000
 ````
 
+> getImageWidthHeight
+
+  获取图片的真是宽高，并做相应处理   
+```html
+<input type="file" id="uploader"/>
+<input type="submit" id="submit" onclick="check()"/>
+```
+```javascript
+function check () {
+    var fileEl = document.getElementById('uploader');
+    JSCT.getImageWidthHeight([fileEl], function (width, height) {
+        console.log(JSCT.sprintf('width: %s, height: %s', width, height))
+    })
+}
+````
+
 ## License
 (The MIT License)
 
