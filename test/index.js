@@ -73,5 +73,10 @@ import * as JSCT from '../src/'
 // console.log(JSCT.dateStr2timestamp('2016-06-16 16:15:59'))
 
 // 判断手机号
-console.log(JSCT.isPhone('18785465548'))
-console.log(JSCT.isPhone('12785465548'))
+// console.log(JSCT.isPhone('18785465548'))
+// console.log(JSCT.isPhone('12785465548'))
+
+//获取未来十周信息
+console.log(JSCT.getWeekByDate(new Date('2017-01-03')))
+console.log(JSCT.getWeekDaysByYearIndex())
+console.log(JSCT.getFurtureTenWeeksInfo(new Date('2017-01-02'), 2))

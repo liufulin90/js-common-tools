@@ -13,7 +13,7 @@ import {getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone,
 
 import {cookie} from './cookie/'
 import {getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage} from './store/'
-import {Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp} from './date/'
+import {Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureTenWeeksInfo} from './date/'
 import {sleep, getImageWidthHeight} from './other/'
 /**
  * include all function to jsct object
@@ -25,17 +25,20 @@ export {
   getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
   cookie,
   getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
-  Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp,
+  Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureTenWeeksInfo,
   sleep, getImageWidthHeight
 }
 
-(function(win) {
+(function() {
   var JSCT = {arrayUnique, arrayQuickSort, isArray, inArray,
     getRandomInt, toFixedDecimal,
     getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
     cookie,
     getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
-    Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp,
+    Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureTenWeeksInfo,
     sleep, getImageWidthHeight}
-  win.JSCT = JSCT
-})(window)
+  if (typeof window == 'undefined') {
+    return
+  }
+  window.JSCT = JSCT
+})()
