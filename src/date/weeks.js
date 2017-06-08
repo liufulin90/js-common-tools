@@ -38,13 +38,13 @@ function getWeekDaysByYearIndex(year = new Date().getFullYear(), index = 1) {
   var arr = [];
   for (var from = d; from < to;) {
     if (i == index) {
-      arr.push(from.getFullYear() + "/" + (from.getMonth() + 1) + "/" + from.getDate());
+      arr.push(from.getFullYear() + '/' + (from.getMonth() + 1) + '/' + from.getDate());
     }
     var j = 6;
     while (j > 0) {
       from.setDate(from.getDate() + 1);
       if (i == index) {
-        arr.push(from.getFullYear() + "/" + (from.getMonth() + 1) + "/" + from.getDate());
+        arr.push(from.getFullYear() + '/' + (from.getMonth() + 1) + '/' + from.getDate());
       }
       j--;
     }
