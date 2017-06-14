@@ -69,7 +69,7 @@ JSCT.isNullOrEmpty([""], true) // true (Recursive check)
 JSCT.isArray(value)
 ```
 
-> inArray
+##### inArray
 
   判断值是否在数组中 
 ```javascript
