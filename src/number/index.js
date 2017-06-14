@@ -4,7 +4,7 @@
 
 /**
  * Returns a random int
- *
+ * 获取指定区间随机数值
  * getRandomInt(1, 100) => 56
  *
  * @param {Number} min

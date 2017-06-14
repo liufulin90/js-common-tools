@@ -13,7 +13,7 @@ import {getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone,
 
 import {cookie} from './cookie/'
 import {getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage} from './store/'
-import {Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureTenWeeksInfo} from './date/'
+import {Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureWeeksInfo} from './date/'
 import {sleep, getImageWidthHeight} from './other/'
 /**
  * include all function to jsct object
@@ -25,7 +25,7 @@ export {
   getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
   cookie,
   getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
-  Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureTenWeeksInfo,
+  Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureWeeksInfo,
   sleep, getImageWidthHeight
 }
 
@@ -35,7 +35,7 @@ export {
     getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
     cookie,
     getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
-    Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureTenWeeksInfo,
+    Timer, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureWeeksInfo,
     sleep, getImageWidthHeight}
   if (typeof window == 'undefined') {
     return

@@ -16,6 +16,16 @@ cookie.get = function (sKey) {
   return decodeURIComponent(document.cookie.replace(new RegExp('(?:(?:^|.*;)\\s*' + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, '\\$&') + '\\s*\\=\\s*([^;]*).*$)|^.*$'), '$1')) || null;
 };
 
+/**
+ * 设置cookie
+ * @param sKey 存储唯一键
+ * @param sValue 存储的值
+ * @param vExpires 有效期
+ * @param sPath 路径
+ * @param sDomain 域名
+ * @param bSecure
+ * @returns {boolean}
+ */
 cookie.set = function (sKey, sValue, vExpires, sPath, sDomain, bSecure) {
   if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) {
     return false;

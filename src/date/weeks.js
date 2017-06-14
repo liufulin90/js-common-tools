@@ -64,7 +64,7 @@ function getWeekDaysByYearIndex(year = new Date().getFullYear(), index = 1) {
  * @param num  指定得到未来多少个周，默认10周
  * @returns {Array}
  */
-function getFurtureTenWeeksInfo (date = new Date(), num = 10) {
+function getFurtureWeeksInfo (date = new Date(), num = 10) {
   var weeks = [];
   var thisWeek = getWeekByDate(date);
 
@@ -110,5 +110,5 @@ function getFurtureTenWeeksInfo (date = new Date(), num = 10) {
 export {
   getWeekByDate,
   getWeekDaysByYearIndex,
-  getFurtureTenWeeksInfo
+  getFurtureWeeksInfo
 }
