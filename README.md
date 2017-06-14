@@ -22,20 +22,20 @@ JS ES6 writing tools based on function
 ```
 ### 目录索引
 #### Array
-- [arrayUnique](>arrayUnique)
-- [arrayQuickSort](>arrayQuickSort)
-- [isNullOrEmpty](>isNullOrEmpty)
-- [isArray](>isArray)
-- [inArray](>inArray)
+- [arrayUnique](#arrayUnique)
+- [arrayQuickSort](#arrayQuickSort)
+- [isNullOrEmpty](#isNullOrEmpty)
+- [isArray](#isArray)
+- [inArray](#inArray)
 #### Number
-- [getRandomInt](>getRandomInt)
-- [toFixedDecimal](>toFixedDecimal)
+- [getRandomInt](#getRandomInt)
+- [toFixedDecimal](#toFixedDecimal)
 #### String
-- [trimAll](>trimAll)
-- [trimL](>trimL)
-- [trimR](>trimR)
-- [getUUID](>getUUID)
-- [sprintf](>sprintf)
+- [trimAll](#trimAll)
+- [trimL](#trimL)
+- [trimR](#trimR)
+- [getUUID](#getUUID)
+- [sprintf](#sprintf)
 
 ### Array
 > arrayUnique
