@@ -20,6 +20,22 @@ JS ES6 writing tools based on function
 ```javascript
   import * as JSCT from 'js-common-tools'
 ```
+### 目录索引
+#### Array
+- [arrayUnique](>arrayUnique)
+- [arrayQuickSort](>arrayQuickSort)
+- [isNullOrEmpty](>isNullOrEmpty)
+- [isArray](>isArray)
+- [inArray](>inArray)
+#### Number
+- [getRandomInt](>getRandomInt)
+- [toFixedDecimal](>toFixedDecimal)
+#### String
+- [trimAll](>trimAll)
+- [trimL](>trimL)
+- [trimR](>trimR)
+- [getUUID](>getUUID)
+- [sprintf](>sprintf)
 
 ### Array
 > arrayUnique
