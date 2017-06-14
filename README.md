@@ -36,6 +36,20 @@ JS ES6 writing tools based on function
 - [trimR](#trimR)
 - [getUUID](#getUUID)
 - [sprintf](#sprintf)
+- [isCreditCard](#isCreditCard)
+- [isEmail](#isEmail)
+- [isUrl](#isUrl)
+- [isPhone](#isPhone)
+- [isIdentityCard](#isIdentityCard)
+#### Other
+- [cookie](#cookie)
+- [store](#store)
+- [Timer](#Timer)
+- [sleep](#sleep)
+- [getNowTimeFormat](#getNowTimeFormat)
+- [timestampFormat](#timestampFormat)
+- [dateStr2timestamp](#dateStr2timestamp)
+- [getImageWidthHeight](#getImageWidthHeight)
 
 ### Array
 > arrayUnique
@@ -69,7 +83,7 @@ JSCT.isNullOrEmpty([""], true) // true (Recursive check)
 JSCT.isArray(value)
 ```
 
-##### inArray
+> inArray
 
   判断值是否在数组中 
 ```javascript
