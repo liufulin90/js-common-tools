@@ -40,7 +40,7 @@ JS ES6 writing tools based on function
 - [isIdentityCard 判断是否为身份证号码](#isidentitycard)
 > Other
 - [cookie](#cookie)
-- [store](#store)
+- [store localStorage,sessionStorage](#store)
 - [Timer 计时器](#timer)
 - [sleep 睡眠延迟](#sleep)
 - [getNowTimeFormat 获取当前时间的格式化日期](#getnowtimeformat)
@@ -472,4 +472,4 @@ console.log(JSCT.getFurtureTenWeeksInfo(new Date('2017-01-02'), 2))
 ## License
 (The MIT License)
 
-Copyright (c) 2016 linxins <liufulin90@163.com>
+Copyright (c) 2016 [linxins](http://www.linxins.com) <liufulin90@163.com>
