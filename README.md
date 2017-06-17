@@ -465,7 +465,7 @@ console.log(JSCT.getWeekDaysByYearIndex(new Date(), 10))
  * @param num  指定得到未来多少个周，默认10周
  * @returns {Array}
  */
-console.log(JSCT.getFurtureTenWeeksInfo(new Date('2017-01-02'), 2))
+console.log(JSCT.getFurtureWeeksInfo(new Date('2017-01-02'), 2))
 ```
 
 
