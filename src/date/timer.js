@@ -49,3 +49,34 @@ Timer.prototype.stop = function () {
 export {
   Timer
 }
+
+//===============================
+/**
+ * 获取指定时间所在月份的第一天开始时刻和最后一天最后时刻的时间戳（秒）
+ * eg: JSCT.getMonthStartEndtDayTimestamp(1500431715)
+ *
+ * @param time 时间戳 timestamp 默认当前时间(秒)
+ * @returns {{start: number, end: number}}
+ */
+const getMonthStartEndtDayTimestamp = (time = new Date().getTime()) => {
+  if (typeof time == 'number') {
+    time = time.toString().length == 10 ? Number(time + '000') : time
+  }
+  let inputDate = new Date(time)
+  let inputYear = inputDate.getFullYear()
+  let imputMonth = inputDate.getMonth() + 1
+
+  let date = new Date(`${inputYear}-${imputMonth}`)
+  let year = date.getFullYear()
+  let month = date.getMonth() + 1
+  let daycount = new Date(year, month, 0).getDate()
+  return {
+    start: Number((new Date(`${inputYear}-${imputMonth}`).getTime() / 1000).toFixed(0)),
+    end: Number((date.getTime() / 1000).toFixed(0)) + daycount * 24 * 3600 - 1
+  }
+}
+
+export {
+  getMonthStartEndtDayTimestamp
+}
+

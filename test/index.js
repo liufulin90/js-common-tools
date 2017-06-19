@@ -77,6 +77,9 @@ import * as JSCT from '../src/'
 // console.log(JSCT.isPhone('12785465548'))
 
 //获取未来十周信息
-console.log(JSCT.getWeekByDate(new Date('2017-01-03')))
-console.log(JSCT.getWeekDaysByYearIndex())
-console.log(JSCT.getFurtureTenWeeksInfo(new Date('2017-01-02'), 2))
+// console.log(JSCT.getWeekByDate(new Date('2017-01-03')))
+// console.log(JSCT.getWeekDaysByYearIndex())
+// console.log(JSCT.getFurtureTenWeeksInfo(new Date('2017-01-02'), 2))
+console.log(JSCT.getMonthStartEndtDayTimestamp(1500431715))
+console.log(JSCT.timestampFormat(JSCT.getMonthStartEndtDayTimestamp(1500431715).start, 'Y-m-d H:i:s'))
+console.log(JSCT.timestampFormat(JSCT.getMonthStartEndtDayTimestamp(1500431715).end, 'Y-m-d H:i:s'))
