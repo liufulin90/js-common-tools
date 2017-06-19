@@ -50,6 +50,7 @@ JS ES6 writing tools based on function
 - [getWeekByDate 获取某一时间所在的周数](#getweekbydate)
 - [getWeekDaysByYearIndex 获取某年的第几周包含的日期](#getweekdaysbyyearindex)
 - [getFurtureWeeksInfo 获得指定日期的未来十周信息](#getfurtureweeksinfo)
+- [getMonthStartEndtDayTimestamp 获取指定时间所在月份的第一天开始时刻和最后一天最后时刻的时间戳（秒）](#getmonthstartendtdaytimestamp)
 
 ## 详细函数及方法
 ### Array
@@ -357,7 +358,7 @@ setTimeout(()=>{
  * @param timeout
  * @returns {Promise}
  */
-const testAsync = async () =#### {
+const testAsync = async () => {
   console.log(1)
   await JSCT.sleep(2000)
   console.log(2) // 两秒后显示 2
@@ -468,6 +469,21 @@ console.log(JSCT.getWeekDaysByYearIndex(new Date(), 10))
 console.log(JSCT.getFurtureWeeksInfo(new Date('2017-01-02'), 2))
 ```
 
+#### getMonthStartEndtDayTimestamp
+
+  获取指定时间所在月份的第一天开始时刻和最后一天最后时刻的时间戳（秒）
+```javascript
+/**
+ * 获取指定时间所在月份的第一天开始时刻和最后一天最后时刻的时间戳（秒）
+ * eg: JSCT.getMonthStartEndtDayTimestamp(1500431715)
+ *
+ * @param time 时间戳 timestamp 默认当前时间(秒)
+ * @returns {{start: number, end: number}}
+ */
+console.log(JSCT.getMonthStartEndtDayTimestamp(1500431715)) // { start: 1498838400, end: 1501516799 }
+console.log(JSCT.timestampFormat(JSCT.getMonthStartEndtDayTimestamp(1500431715).start, 'Y-m-d H:i:s')) // 2017-07-01 00:00:00
+console.log(JSCT.timestampFormat(JSCT.getMonthStartEndtDayTimestamp(1500431715).end, 'Y-m-d H:i:s')) // 2017-07-31 23:59:59
+```
 
 ## License
 (The MIT License)

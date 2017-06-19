@@ -44,6 +44,10 @@ via npm:
 - [timestampFormat](#timestampformat)
 - [dateStr2timestamp](#datestr2timestamp)
 - [getImageWidthHeight](#getimagewidthheight)
+- [getWeekByDate](#getweekbydate)
+- [getWeekDaysByYearIndex](#getweekdaysbyyearindex)
+- [getFurtureWeeksInfo](#getfurtureweeksinfo)
+- [getMonthStartEndtDayTimestamp](#getMonthStartEndtDayTimestamp)
 
 ##Detailed functions and methods
 
@@ -210,7 +214,7 @@ via npm:
 
   Use async/await to do the code behind the sleep delay sleep
 ```javascript
-  const testAsync = async () =#### {
+  const testAsync = async () => {
     console.log(1)
     await JSCT.sleep(2000)
     console.log(2) // 2 seconds after show 2
@@ -255,6 +259,65 @@ function check () {
     })
 }
 ````
+
+#### getWeekByDate
+
+  Gets the number of weeks at a given time
+```javascript
+/**
+ * Gets the number of weeks at a given time
+ *
+ * @param date
+ * eg: Date('2017-01-01')
+ */
+console.log(JSCT.getWeekByDate(new Date('2017-01-03')))
+```
+
+#### getWeekDaysByYearIndex
+
+  Gets the date that contains the first few weeks of the year 
+  
+```javascript
+/**
+ * Gets the date that contains the first few weeks of the year
+ *
+ * @param year 
+ * @param index 
+ * @returns {Array}
+ */
+console.log(JSCT.getWeekDaysByYearIndex(new Date(), 10))
+```
+
+#### getFurtureWeeksInfo
+
+  Gets the next ten weeks of information for the specified date
+```javascript
+/**
+ * Gets the next ten weeks of information for the specified date
+ *
+ * @param date 
+ * eg: new Date('2017-01-02')
+ * @param num  
+ * @returns {Array}
+ */
+console.log(JSCT.getFurtureWeeksInfo(new Date('2017-01-02'), 2))
+```
+
+#### getMonthStartEndtDayTimestamp
+
+  Gets the timestamp (seconds) of the first day, the start and the last day of the month in which the specified time is specified
+```javascript
+/**
+ * Gets the timestamp (seconds) of the first day, the start and the last day of the month in which the specified time is specified
+ * eg: JSCT.getMonthStartEndtDayTimestamp(1500431715)
+ *
+ * @param time 
+ * @returns {{start: number, end: number}}
+ */
+console.log(JSCT.getMonthStartEndtDayTimestamp(1500431715)) // { start: 1498838400, end: 1501516799 }
+console.log(JSCT.timestampFormat(JSCT.getMonthStartEndtDayTimestamp(1500431715).start, 'Y-m-d H:i:s')) // 2017-07-01 00:00:00
+console.log(JSCT.timestampFormat(JSCT.getMonthStartEndtDayTimestamp(1500431715).end, 'Y-m-d H:i:s')) // 2017-07-31 23:59:59
+```
 
 ## License
 (The MIT License)
