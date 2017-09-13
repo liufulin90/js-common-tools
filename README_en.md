@@ -21,6 +21,7 @@ via npm:
 - [isNullOrEmpty](#isnullorempty)
 - [isArray](#isarray)
 - [inArray](#inarray)
+- [arrayIsRepeat](#arrayIsRepeat)
 > Number
 - [getRandomInt](#getrandomint)
 - [toFixedDecimal](#tofixeddecimal)

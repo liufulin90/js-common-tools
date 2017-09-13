@@ -14,15 +14,28 @@ JS ES6 writing tools based on function
 ```
 
 ## 引入工具包
+### 方式一
 ```javascript
   import * as JSCT from 'js-common-tools'
 ```
+### 方式二:
+如果直接引入的是 `lib/js-common-tools.xxx.js` 的话，所有的函数都已经全部注入到 `window` 对象中。
+其中函数有一个前缀 `js_`，目的是避免跟其他框架函数有所冲突。 
+
+调用示例：
+```javascript
+  js_isEmail('liufulin90@163.com'); // true
+  js_arrayIsRepeat([1, 2, 3, 4, 5, 2]); // true
+```
+#### PS： 以下所有示例均为方法一的调用
+
 ## 目录索引
 > Array
 - [arrayUnique 数组去重](#arrayunique)
 - [arrayQuickSort 对数组进行排序](#arrayquicksort)
 - [isArray 判断是否为数组](#isarray)
 - [inArray 判断值是否在数组中](#inarray)
+- [arrayIsRepeat 判断数组是否有重复值](#arrayIsRepeat)
 > Number
 - [getRandomInt 获得指定区间的随机整数](#getrandomint)
 - [toFixedDecimal 返回指定小数位数的十进制](#tofixeddecimal)
