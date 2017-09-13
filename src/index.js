@@ -1,7 +1,7 @@
 /**
  * array all tool
  */
-import {arrayUnique, arrayQuickSort, isArray, inArray} from './array/'
+import {arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat} from './array/'
 
 /** number all tools */
 import {getRandomInt, toFixedDecimal} from './number/'
@@ -22,7 +22,7 @@ import {sleep, getImageWidthHeight} from './other/'
  * @type {{arrayUnique: arrayUnique, arrayQuickSort: arrayQuickSort, isArray: isArray, inArray: inArray, getRandomInt: getRandomInt, toFixedDecimal: toFixedDecimal, getUUID: getUUID, isNullOrEmpty: isNullOrEmpty, isString: isString, isCreditCard: isCreditCard, isEmail: isEmail, isUrl: isUrl, isIdentityCard: isIdentityCard, sprintf: sprintf, cookie: cookie, getLocalStorage: getLocalStorage, setLocalStorage: setLocalStorage, getSessionStorage: getSessionStorage, setSessionStorage: setSessionStorage, Timer: Timer}}
  */
 export {
-  arrayUnique, arrayQuickSort, isArray, inArray,
+  arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat,
   getRandomInt, toFixedDecimal,
   getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
   cookie,
@@ -32,7 +32,7 @@ export {
 }
 
 (function() {
-  var JSCT = {arrayUnique, arrayQuickSort, isArray, inArray,
+  var JSCT = {arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat,
     getRandomInt, toFixedDecimal,
     getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
     cookie,
@@ -41,6 +41,9 @@ export {
     sleep, getImageWidthHeight}
   if (typeof window == 'undefined') {
     return
+  }
+  for (let i in JSCT) {
+    window['js_' + i] = JSCT[i];
   }
   window.JSCT = JSCT
 })()

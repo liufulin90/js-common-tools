@@ -156,9 +156,27 @@ const inArray = (needle, haystack, strict = false) => {
   return false;
 }
 
+/**
+ * 判断数组是否有重复值
+ *
+ * @param arr 需要判断的数组
+ * @returns {boolean} ture: 有重复值  false: 没有重复值
+ */
+const arrayIsRepeat = (arr) => {
+  var hash = {};
+  for (var i in arr) {
+    if (hash[arr[i]]) {
+      return true;
+    }
+    hash[arr[i]] = true;
+  }
+  return false;
+}
+
 export {
   arrayUnique,
   arrayQuickSort,
   isArray,
-  inArray
+  inArray,
+  arrayIsRepeat
 }

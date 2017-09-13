@@ -131,7 +131,20 @@ JSCT.isArray(value)
 JSCT.inArray(1, ['1', 'ss'], true) // false
 JSCT.inArray(1, [1, 'ss'], true) // true
 ```
-     
+
+#### arrayIsRepeat
+
+  判断数组是否有重复值 
+```javascript
+/**
+ * 判断数组是否有重复值
+ *
+ * @param arr 需要判断的数组
+ * @returns {boolean} ture: 有重复值  false: 没有重复值
+ */
+console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5])); // false
+console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, 2])); // true
+``` 
      
 ### Number
 #### getRandomInt

@@ -93,6 +93,20 @@ via npm:
   JSCT.inArray(1, [1, 'ss'], true) // true
 ```
 
+#### arrayIsRepeat
+
+  check array is repeat 
+```javascript
+/**
+ * check array is repeat 
+ *
+ * @param arr 
+ * @returns {boolean}
+ */
+console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5])); // false
+console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, 2])); // true
+``` 
+
 ### Number
 #### getRandomInt
 
