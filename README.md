@@ -36,11 +36,11 @@ JS ES6 writing tools based on function
 - [arrayQuickSort 对数组进行排序](#arrayquicksort)
 - [isArray 判断是否为数组](#isarray)
 - [inArray 判断值是否在数组中](#inarray)
-- [arrayIsRepeat 判断数组是否有重复值](#arrayIsRepeat)
+- [arrayIsRepeat 判断数组是否有重复值](#arrayisrepeat)
 > Number
 - [getRandomInt 获得指定区间的随机整数](#getrandomint)
 - [toFixedDecimal 返回指定小数位数的十进制](#tofixeddecimal)
-- [isPrice 判断是否为正确金额](#isPrice)
+- [isPrice 判断是否为正确金额](#isprice)
 > String
 - [trimAll 清除字符中所有空格](#trimall)
 - [trimL 清除字符中左边空格](#triml)

@@ -21,11 +21,11 @@ via npm:
 - [isNullOrEmpty](#isnullorempty)
 - [isArray](#isarray)
 - [inArray](#inarray)
-- [arrayIsRepeat](#arrayIsRepeat)
+- [arrayIsRepeat](#arrayisrepeat)
 > Number
 - [getRandomInt](#getrandomint)
 - [toFixedDecimal](#tofixeddecimal)
-- [isPrice](#isPrice)
+- [isPrice](#isprice)
 > String
 - [trimAll](#trimall)
 - [trimL](#triml)
