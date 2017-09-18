@@ -40,6 +40,7 @@ JS ES6 writing tools based on function
 > Number
 - [getRandomInt 获得指定区间的随机整数](#getrandomint)
 - [toFixedDecimal 返回指定小数位数的十进制](#tofixeddecimal)
+- [isPrice 判断是否为正确金额](#isPrice)
 > String
 - [trimAll 清除字符中所有空格](#trimall)
 - [trimL 清除字符中左边空格](#triml)
@@ -192,6 +193,20 @@ JSCT.getRandomInt(1, 20)
 JSCT.toFixedDecimal(1.689442324, 2) // 1.68
 ```
   
+#### isPrice
+  
+  判断是否为正确金额
+```javascript
+/**
+ * 判断是否为正确金额
+ * console.log(JSCT.isPrice('12.37')); // true
+ * console.log(JSCT.isPrice('12&37')); // false
+ * @param value
+ * @returns {boolean}
+ */
+JSCT.isPrice('12.37')  // true
+```
+
 ### String
 #### trimAll 
   

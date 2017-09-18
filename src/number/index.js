@@ -39,7 +39,20 @@ const toFixedDecimal = (number, precision = 2) => {
   return Math.round(number * power) / power;
 }
 
+/**
+ * 判断是否为正确金额
+ * console.log(JSCT.isPrice('12.37')); // true
+ * console.log(JSCT.isPrice('12&37')); // false
+ * @param value
+ * @returns {boolean}
+ */
+const isPrice = (value) => {
+  let reg = /^(([1-9][0-9]*)|(([0]\.\d{1,2}|[1-9][0-9]*\.\d{1,2})))$/;
+  return reg.test(value);
+}
+
 export {
   getRandomInt,
-  toFixedDecimal
+  toFixedDecimal,
+  isPrice
 }

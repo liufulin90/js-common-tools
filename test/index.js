@@ -85,5 +85,9 @@ import * as JSCT from '../src/'
 // console.log(JSCT.timestampFormat(JSCT.getMonthStartEndtDayTimestamp(1500431715).end, 'Y-m-d H:i:s'))
 
 // 数组值重复
-console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5]));
-console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, 2]));
+// console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5]));
+// console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, 2]));
+
+// 判断金额
+console.log(JSCT.isPrice('12.37')); // true
+console.log(JSCT.isPrice('12&37')); // false

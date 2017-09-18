@@ -4,7 +4,7 @@
 import {arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat} from './array/'
 
 /** number all tools */
-import {getRandomInt, toFixedDecimal} from './number/'
+import {getRandomInt, toFixedDecimal, isPrice} from './number/'
 
 /**
  * string all tools
@@ -23,7 +23,7 @@ import {sleep, getImageWidthHeight} from './other/'
  */
 export {
   arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat,
-  getRandomInt, toFixedDecimal,
+  getRandomInt, toFixedDecimal, isPrice,
   getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
   cookie,
   getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
@@ -33,7 +33,7 @@ export {
 
 (function() {
   var JSCT = {arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat,
-    getRandomInt, toFixedDecimal,
+    getRandomInt, toFixedDecimal, isPrice,
     getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
     cookie,
     getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,

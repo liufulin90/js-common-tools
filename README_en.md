@@ -25,6 +25,7 @@ via npm:
 > Number
 - [getRandomInt](#getrandomint)
 - [toFixedDecimal](#tofixeddecimal)
+- [isPrice](#isPrice)
 > String
 - [trimAll](#trimall)
 - [trimL](#triml)
@@ -121,6 +122,19 @@ console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, 2])); // true
   Returns fixed decimal number<br>
 ```javascript
   JSCT.toFixedDecimal(1.689442324, 2) // 1.68
+```
+  
+#### isPrice
+  
+  Determine whether the amount is correct
+```javascript
+/**
+ * console.log(JSCT.isPrice('12.37')); // true
+ * console.log(JSCT.isPrice('12&37')); // false
+ * @param value
+ * @returns {boolean}
+ */
+JSCT.isPrice('12.37')  // true
 ```
 
 ### String
