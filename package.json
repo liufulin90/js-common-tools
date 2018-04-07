@@ -1,6 +1,6 @@
 {
   "name": "js-common-tools",
-  "version": "0.1.11",
+  "version": "1.0.1",
   "description": "基于JS ES6 写法相关工具函数",
   "main": "lib/index.js",
   "scripts": {
@@ -41,12 +41,6 @@
     "eslint-plugin-standard": "^2.0.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.1",
-    "karma": "^1.4.1",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.1.0",
-    "karma-sourcemap-loader": "^0.3.7",
-    "karma-spec-reporter": "0.0.26",
     "webpack": "^3.4.1"
   },
   "author": "linxins",

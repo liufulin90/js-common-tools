@@ -31,6 +31,22 @@ JS ES6 writing tools based on function
 #### PS： 以下所有示例均为方式一的调用
 
 ## 目录索引
+> Is JS判断函数
+- [isNumber 判断是否为数字](#isnumber)
+- [isBoolean 判断是否为布尔](#isboolean)
+- [isString 判断是否为字符串](#isstring)
+- [isNull 判断是否是null](#isnull)
+- [isUndefined 判断是否未定义](#isundefined)
+- [isObject 判断是否为对象](#isobject)
+- [isFunction 判断是否为函数](#isfunction)
+- [isArray 判断是否为数组](#isarray)
+- [isPrice 判断是否为正确金额](#isprice)
+- [isCreditCard 判断是否为信用卡](#iscreditcard)
+- [isEmail 判断是否为正确邮箱](#isemail)
+- [isUrl 判断是否为url](#isurl)
+- [isPhone 判断是否为手机号](#isphone)
+- [isIdentityCard 判断是否为身份证号码](#isidentitycard)
+
 > Array
 - [arrayUnique 数组去重](#arrayunique)
 - [arrayQuickSort 对数组进行排序](#arrayquicksort)
@@ -68,6 +84,99 @@ JS ES6 writing tools based on function
 - [getMonthStartEndtDayTimestamp 获取指定时间所在月份的第一天开始时刻和最后一天最后时刻的时间戳（秒）](#getmonthstartendtdaytimestamp)
 
 ## 详细函数及方法
+###  Is JS判断函数
+#### isNumber
+
+  判断是否为数字
+```javascript
+/**
+ * 判断是否为数字
+ * console.log(JSCT.isNumber(1237)); // true
+ * console.log(JSCT.isNumber('ss')); // false
+ * @param value
+ * @returns {boolean}
+ */
+JSCT.isNumber(1237)  // true
+```
+#### isBoolean
+
+  判断是否为布尔
+```javascript
+/**
+ * 判断是否为布尔
+ * console.log(JSCT.isBoolean(true)); // true
+ * console.log(JSCT.isBoolean('ss')); // false
+ * @param value
+ * @returns {boolean}
+ */
+JSCT.isBoolean(true)  // true
+```
+#### isString
+
+  判断是否为字符串
+```javascript
+/**
+ * 判断是否为字符串
+ * console.log(JSCT.isString(sss)); // true
+ * console.log(JSCT.isString(234)); // false
+ * @param value
+ * @returns {boolean}
+ */
+JSCT.isString('sss')  // true
+```
+#### isNull
+
+  判断是否是null
+```javascript
+/**
+ * 判断是否为字符串
+ * console.log(JSCT.isNull(null)); // true
+ * console.log(JSCT.isNull(234)); // false
+ * @param value
+ * @returns {boolean}
+ */
+JSCT.isNull(null)  // true
+```
+#### isUndefined
+
+  判断是否未定义
+```javascript
+/**
+ * 判断是否未定义
+ * @param value
+ * @returns {boolean}
+ */
+var a = 1
+JSCT.isUndefined(a)  // false
+```
+#### isObject
+
+  判断是否为对象
+```javascript
+/**
+ * 判断是否为对象
+ * console.log(JSCT.isObject({})); // true
+ * console.log(JSCT.isObject(234)); // false
+ * @param value
+ * @returns {boolean}
+ */
+JSCT.isObject({})  // true
+```
+#### isFunction
+
+  判断是否为函数
+```javascript
+/**
+ * 判断是否为函数
+ * @param value
+ * @returns {boolean}
+ */
+JSCT.isFunction({})  // false
+JSCT.isFunction(function() {
+  // TODO
+})  // true
+```
+
 ### Array
 #### arrayUnique
   

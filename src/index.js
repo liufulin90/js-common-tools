@@ -18,6 +18,10 @@ import {Timer, getMonthStartEndtDayTimestamp, getNowTimeFormat, timestampFormat,
 
 import {sleep, getImageWidthHeight} from './other/'
 /**
+ * JS判断函数，解决80%类型判断问题
+ */
+import {isNumber, isBoolean, isNull, isUndefined, isObject, isFunction} from './is/'
+/**
  * include all function to jsct object
  * @type {{arrayUnique: arrayUnique, arrayQuickSort: arrayQuickSort, isArray: isArray, inArray: inArray, getRandomInt: getRandomInt, toFixedDecimal: toFixedDecimal, getUUID: getUUID, isNullOrEmpty: isNullOrEmpty, isString: isString, isCreditCard: isCreditCard, isEmail: isEmail, isUrl: isUrl, isIdentityCard: isIdentityCard, sprintf: sprintf, cookie: cookie, getLocalStorage: getLocalStorage, setLocalStorage: setLocalStorage, getSessionStorage: getSessionStorage, setSessionStorage: setSessionStorage, Timer: Timer}}
  */
@@ -28,7 +32,8 @@ export {
   cookie,
   getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
   Timer, getMonthStartEndtDayTimestamp, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureWeeksInfo,
-  sleep, getImageWidthHeight
+  sleep, getImageWidthHeight,
+  isNumber, isBoolean, isNull, isUndefined, isObject, isFunction
 }
 
 (function() {
@@ -38,7 +43,8 @@ export {
     cookie,
     getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
     Timer, getMonthStartEndtDayTimestamp, getNowTimeFormat, timestampFormat, dateStr2timestamp, getWeekByDate, getWeekDaysByYearIndex, getFurtureWeeksInfo,
-    sleep, getImageWidthHeight}
+    sleep, getImageWidthHeight,
+    isNumber, isBoolean, isNull, isUndefined, isObject, isFunction}
   if (typeof window == 'undefined') {
     return
   }
