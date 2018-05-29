@@ -160,15 +160,23 @@ const inArray = (needle, haystack, strict = false) => {
  * 判断数组是否有重复值
  *
  * @param arr 需要判断的数组
+ * @param strict： 严格模式true，非严格false
  * @returns {boolean} ture: 有重复值  false: 没有重复值
  */
-const arrayIsRepeat = (arr) => {
+const arrayIsRepeat = (arr, strict = false) => {
   var hash = {};
   for (var i in arr) {
-    if (hash[arr[i]]) {
-      return true;
+    if (strict === true) {
+      if (hash[arr[i]] && hash[arr[i]] === arr[i]) {
+        return true;
+      }
+      hash[arr[i]] = arr[i];
+    } else {
+      if (hash[arr[i]]) {
+        return true;
+      }
+      hash[arr[i]] = true;
     }
-    hash[arr[i]] = true;
   }
   return false;
 }

@@ -1,0 +1,299 @@
+    <section class="suite">
+      <h1>Array&#x76F8;&#x5173;&#x51FD;&#x6570;&#x6D4B;&#x8BD5;</h1>
+      <dl>
+        <section class="suite">
+          <h1>&#x6570;&#x7EC4;&#x53BB;&#x91CD;, arrayUnique &#x51FD;&#x6570;</h1>
+          <dl>
+            <dt>JSCT.arrayUnique([3, 55, {a: 1}, 7, {a: 1}, {b: 2}, 55]) &#x7ED3;&#x679C;&#x4E3A; [3, 55, { a: 1 }, 7, {b: 2}]</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.arrayUnique([3, 55, { a: 1 }, 7, { a: 1 }, { b: 2 }, 55])).to.deep.equal([3, 55, { a: 1 }, 7, { b: 2 }]);</code></pre></dd>
+            <dt>JSCT.arrayUnique([5, 3, 55, {a: 1}, 77, 55]) &#x7ED3;&#x679C;&#x4E3A; [5, 3, 55, { a: 1 }, 77]</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.arrayUnique([5, 3, 55, { a: 1 }, 77, 55])).to.deep.equal([5, 3, 55, { a: 1 }, 77]);</code></pre></dd>
+            <dt>JSCT.arrayUnique([5, 3, [8, 8, {b: 1}], 55, [8, 8, {b: 1}], {a: 1}, 3, {a: 1}, 77, 55, 99]) &#x7ED3;&#x679C;&#x4E3A; [5, 3, [ 8, 8, { b: 1 } ], 55, { a: 1 }, 77, 99]</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.arrayUnique([5, 3, [8, 8, { b: 1 }], 55, [8, 8, { b: 1 }], { a: 1 }, 3, { a: 1 }, 77, 55, 99])).to.deep.equal([5, 3, [8, 8, { b: 1 }], 55, { a: 1 }, 77, 99]);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF08;&#x9ED8;&#x8BA4;&#x5347;&#x5E8F;&#xFF09;, arrayQuickSort &#x51FD;&#x6570;</h1>
+          <dl>
+            <dt>JSCT.arrayUnique([5, 3, 55, 3, 77, 55, 99, 2, 4]) &#x5347;&#x5E8F;&#x7ED3;&#x679C;&#x4E3A; [2, 3, 3, 4, 5, 55, 55, 77, 99]</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.arrayQuickSort([5, 3, 55, 3, 77, 55, 99, 2, 4])).to.deep.equal([2, 3, 3, 4, 5, 55, 55, 77, 99]);</code></pre></dd>
+            <dt>JSCT.arrayUnique([5, 3, 55, 3, 77, 55, 99, 2, 4], &#x22;desc&#x22;) &#x5C06;&#x5E8F;&#x7ED3;&#x679C;&#x4E3A; [99, 77, 55, 55, 5, 4, 3, 3, 2]</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.arrayQuickSort([5, 3, 55, 3, 77, 55, 99, 2, 4], &#x27;desc&#x27;)).to.deep.equal([99, 77, 55, 55, 5, 4, 3, 3, 2]);</code></pre></dd>
+            <dt>[5, 3, 55, 3, 77, 55, 99, 2, 4].arrayQuickSort(&#x22;desc&#x22;) &#x5C06;&#x5E8F;&#x7ED3;&#x679C;&#x4E3A; [99, 77, 55, 55, 5, 4, 3, 3, 2]</dt>
+            <dd><pre><code>(0, _chai.expect)([5, 3, 55, 3, 77, 55, 99, 2, 4].arrayQuickSort(&#x27;desc&#x27;)).to.deep.equal([99, 77, 55, 55, 5, 4, 3, 3, 2]);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isArray&#x51FD;&#x6570;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;</h1>
+          <dl>
+            <dt>JSCT.isArray([5]) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isArray([5])).to.be.ok;</code></pre></dd>
+            <dt>JSCT.isArray([]) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isArray([])).to.be.ok;</code></pre></dd>
+            <dt>JSCT.isArray({}) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isArray({})).to.be.false;</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>inArray&#x51FD;&#x6570;&#x5224;&#x65AD;&#x503C;&#x662F;&#x5426;&#x5728;&#x6570;&#x7EC4;&#x4E2D;</h1>
+          <dl>
+            <dt>JSCT.inArray(3, [3, 5]) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.inArray(3, [3, 5])).to.be.ok;</code></pre></dd>
+            <dt>JSCT.inArray(&#x22;3&#x22;, [3, 5]) &#x7ED3;&#x679C;&#x4E3A; true   &#x975E;&#x4E25;&#x683C;&#x6A21;&#x5F0F;</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.inArray(&#x27;3&#x27;, [3, 5])).to.be.true;</code></pre></dd>
+            <dt>JSCT.inArray(&#x22;3&#x22;, [3, 5], true) &#x7ED3;&#x679C;&#x4E3A; false   &#x4E25;&#x683C;&#x6A21;&#x5F0F;</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.inArray(&#x27;3&#x27;, [3, 5], true)).to.be.false;</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>arrayIsRepeat&#x51FD;&#x6570;&#x5224;&#x65AD;&#x6570;&#x7EC4;&#x662F;&#x5426;&#x6709;&#x91CD;&#x590D;&#x503C;</h1>
+          <dl>
+            <dt>JSCT.arrayIsRepeat([3, 5]) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.arrayIsRepeat([3, 5])).to.be.false;</code></pre></dd>
+            <dt>JSCT.arrayIsRepeat([3, 3, 5]) &#x7ED3;&#x679C;&#x4E3A; true   &#x975E;&#x4E25;&#x683C;&#x6A21;&#x5F0F;</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.arrayIsRepeat([3, 3, 5])).to.be.ok;</code></pre></dd>
+            <dt>JSCT.arrayIsRepeat([3, &#x22;3&#x22;, 5]) &#x7ED3;&#x679C;&#x4E3A; false   &#x4E25;&#x683C;&#x6A21;&#x5F0F;</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.arrayIsRepeat([3, &#x27;3&#x27;, 5], true)).to.be.false;</code></pre></dd>
+          </dl>
+        </section>
+      </dl>
+    </section>
+    <section class="suite">
+      <h1>JS&#x5224;&#x65AD;&#x51FD;&#x6570;&#xFF0C;&#x89E3;&#x51B3;80%&#x7C7B;&#x578B;&#x5224;&#x65AD;&#x95EE;&#x9898;</h1>
+      <dl>
+        <section class="suite">
+          <h1>isNumber &#x51FD;&#x6570;</h1>
+          <dl>
+            <dt>JSCT.isNumber(100) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNumber(100)).to.be.ok;</code></pre></dd>
+            <dt>JSCT.isNumber(&#x22;12&#x22;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNumber(&#x27;12&#x27;)).to.be.false;</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isBoolean &#x51FD;&#x6570;</h1>
+          <dl>
+            <dt>JSCT.isBoolean(true) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isBoolean(true)).to.be.ok;</code></pre></dd>
+            <dt>JSCT.isBoolean(&#x22;12&#x22;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isBoolean(&#x27;12&#x27;)).to.be.false;</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isString &#x51FD;&#x6570;</h1>
+          <dl>
+            <dt>JSCT.isString(&#x22;sss&#x22;) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isString(&#x27;sss&#x27;)).to.be.true;</code></pre></dd>
+            <dt>JSCT.isString(true) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isString(true)).to.be.false;</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isNull &#x51FD;&#x6570;</h1>
+          <dl>
+            <dt>JSCT.isNull(null) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNull(null)).to.be.true;</code></pre></dd>
+            <dt>JSCT.isNull(&#x22;123&#x22;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNull(&#x27;123&#x27;)).to.be.false;</code></pre></dd>
+            <dt>JSCT.isNull(true) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNull(true)).to.be.false;</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isUndefined &#x51FD;&#x6570;</h1>
+          <dl>
+            <dt>JSCT.isUndefined() &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isUndefined()).to.be.true;</code></pre></dd>
+            <dt>JSCT.isUndefined(&#x22;&#x22;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isUndefined(&#x27;&#x27;)).to.be.false;</code></pre></dd>
+            <dt>JSCT.isUndefined(null) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isUndefined(null)).to.be.false;</code></pre></dd>
+            <dt>JSCT.isUndefined(0) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isUndefined(0)).to.be.false;</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isObject &#x51FD;&#x6570;</h1>
+          <dl>
+            <dt>JSCT.isObject() &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isObject()).to.be.false;</code></pre></dd>
+            <dt>JSCT.isObject(&#x22;&#x22;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isObject(&#x22;&#x22;)).to.be.false;</code></pre></dd>
+            <dt>JSCT.isObject(null) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isObject(null)).to.be.ok;</code></pre></dd>
+            <dt>JSCT.isObject({}) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isObject({})).to.be.ok;</code></pre></dd>
+            <dt>JSCT.isObject([1]) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isObject([1])).to.be.ok;</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isFunction &#x51FD;&#x6570;</h1>
+          <dl>
+            <dt>JSCT.isFunction() &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isFunction()).to.be.false;</code></pre></dd>
+            <dt>JSCT.isFunction(function () {}) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isFunction(function () {})).to.be.true;</code></pre></dd>
+          </dl>
+        </section>
+      </dl>
+    </section>
+    <section class="suite">
+      <h1>Number&#x76F8;&#x5173;&#x51FD;&#x6570;&#x6D4B;&#x8BD5;</h1>
+      <dl>
+        <section class="suite">
+          <h1>getRandomInt&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x968F;&#x673A;&#x6570;&#x503C;</h1>
+          <dl>
+            <dt>JSCT.getRandomInt(1, 100) &#x7ED3;&#x679C;&#x5C0F;&#x4E8E;100&#x5927;&#x4E8E;1</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.getRandomInt(1, 100)).to.be.below(100).to.be.above(1);</code></pre></dd>
+            <dt>JSCT.getRandomInt(500, 600) &#x7ED3;&#x679C;&#x5C0F;&#x4E8E;600&#x5927;&#x4E8E;500</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.getRandomInt(500, 600)).to.be.below(600).to.be.above(500);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>toFixedDecimal&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x5C0F;&#x6570;&#x4F4D;&#x6570;&#x7684;&#x5341;&#x8FDB;&#x5236;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E24;&#x4F4D;&#x5C0F;&#x6570;&#xFF08;&#x56DB;&#x820D;&#x4E94;&#x5165;&#xFF09;</h1>
+          <dl>
+            <dt>JSCT.toFixedDecimal(1.689442324, 2) &#x7ED3;&#x679C;&#x4E3A;1.69</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.toFixedDecimal(1.689442324, 2)).to.be.equal(1.69);</code></pre></dd>
+            <dt>JSCT.toFixedDecimal(1.681142324, 3) &#x7ED3;&#x679C;&#x4E3A;1.681</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.toFixedDecimal(1.681142324, 3)).to.be.equal(1.681);</code></pre></dd>
+            <dt>JSCT.toFixedDecimal(1.681152324, 4) &#x7ED3;&#x679C;&#x4E3A;1.6812</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.toFixedDecimal(1.681152324, 4)).to.be.equal(1.6812);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isPrice&#x51FD;&#x6570;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x6B63;&#x786E;&#x91D1;&#x989D;</h1>
+          <dl>
+            <dt>JSCT.isPrice(11.35) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isPrice(11.35)).to.be.ok;</code></pre></dd>
+            <dt>JSCT.isPrice(9.3) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isPrice(9.3)).to.be.ok;</code></pre></dd>
+            <dt>JSCT.isPrice(1.689) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isPrice(1.689)).to.be.false;</code></pre></dd>
+            <dt>JSCT.isPrice(&#x22;123#d&#x22;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isPrice(&#x27;123#d&#x27;)).to.be.false;</code></pre></dd>
+          </dl>
+        </section>
+      </dl>
+    </section>
+    <section class="suite">
+      <h1>String&#x76F8;&#x5173;&#x51FD;&#x6570;&#x6D4B;&#x8BD5;</h1>
+      <dl>
+        <section class="suite">
+          <h1>trim&#x53BB;&#x9664;&#x7A7A;&#x683C;&#x51FD;&#x6570;&#x6D4B;&#x8BD5;</h1>
+          <dl>
+            <dt>&#x6E05;&#x9664;&#x5B57;&#x7B26;&#x4E2D;&#x6240;&#x6709;&#x7A7A;&#x683C;&#xFF0C;&#x22;a b c d &#x22;.trimAll()&#x7ED3;&#x679C;&#x4E3A;&#x22;abcd&#x22;</dt>
+            <dd><pre><code>(0, _chai.expect)(&#x27;a b c d &#x27;.trimAll()).to.be.equal(&#x27;abcd&#x27;);</code></pre></dd>
+            <dt>&#x6E05;&#x9664;&#x5B57;&#x7B26;&#x4E2D;&#x4E2D;&#x5DE6;&#x8FB9;&#x7A7A;&#x683C;&#xFF0C;&#x22;   a b c d&#x22;.trimL()&#x7ED3;&#x679C;&#x4E3A;&#x22;a b c d&#x22;</dt>
+            <dd><pre><code>(0, _chai.expect)(&#x27;   a b c d&#x27;.trimL()).to.be.equal(&#x27;a b c d&#x27;);</code></pre></dd>
+            <dt>&#x6E05;&#x9664;&#x5B57;&#x7B26;&#x4E2D;&#x4E2D;&#x53F3;&#x8FB9;&#x7A7A;&#x683C;&#xFF0C;&#x22;a b c d   &#x22;.trimR()&#x7ED3;&#x679C;&#x4E3A;&#x22;a b c d&#x22;</dt>
+            <dd><pre><code>(0, _chai.expect)(&#x27;a b c d   &#x27;.trimR()).to.be.equal(&#x27;a b c d&#x27;);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isNullOrEmpty&#x51FD;&#x6570;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x7A7A;</h1>
+          <dl>
+            <dt>JSCT.isNullOrEmpty(0) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty(0)).to.be.ok;</code></pre></dd>
+            <dt>JSCT.isNullOrEmpty(1) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty(1)).to.not.be.ok;</code></pre></dd>
+            <dt>JSCT.isNullOrEmpty(&#x22;&#x22;) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty(&#x22;&#x22;)).to.be.ok;</code></pre></dd>
+            <dt>JSCT.isNullOrEmpty([]) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty([])).to.be.equal(false);</code></pre></dd>
+            <dt>JSCT.isNullOrEmpty([], true) &#x7ED3;&#x679C;&#x4E3A; true&#x3002; (ps: &#x9012;&#x5F52;&#x68C0;&#x67E5;&#xFF0C;&#x68C0;&#x67E5;&#x5185;&#x90E8;&#x503C;)</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty([], true)).to.be.equal(true);</code></pre></dd>
+            <dt>JSCT.isNullOrEmpty([&#x22;&#x22;]) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty([&#x22;&#x22;], true)).to.be.equal(false);</code></pre></dd>
+            <dt>JSCT.isNullOrEmpty([&#x22;&#x22;], true) &#x7ED3;&#x679C;&#x4E3A; false&#x3002; (ps: &#x9012;&#x5F52;&#x68C0;&#x67E5;&#xFF0C;&#x68C0;&#x67E5;&#x5185;&#x90E8;&#x503C;)</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty([&#x22;&#x22;], true)).to.be.equal(false);</code></pre></dd>
+            <dt>JSCT.isNullOrEmpty([null]) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty([null])).to.be.equal(false);</code></pre></dd>
+            <dt>JSCT.isNullOrEmpty([null], true) &#x7ED3;&#x679C;&#x4E3A; true&#x3002; (ps: &#x9012;&#x5F52;&#x68C0;&#x67E5;&#xFF0C;&#x68C0;&#x67E5;&#x5185;&#x90E8;&#x503C;)</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty([null], true)).to.be.equal(true);</code></pre></dd>
+            <dt>JSCT.isNullOrEmpty({}) &#x7ED3;&#x679C;&#x4E3A; false </dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty({})).to.be.equal(false);</code></pre></dd>
+            <dt>JSCT.isNullOrEmpty({}, true) &#x7ED3;&#x679C;&#x4E3A; true&#x3002; (ps: &#x9012;&#x5F52;&#x68C0;&#x67E5;&#xFF0C;&#x68C0;&#x67E5;&#x5185;&#x90E8;&#x503C;)</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isNullOrEmpty({}, true)).to.be.equal(true);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isString&#x51FD;&#x6570;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</h1>
+          <dl>
+            <dt>JSCT.isString(&#x22;&#x22;) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isString(&#x27;&#x27;)).to.be.equal(true);</code></pre></dd>
+            <dt>JSCT.isString(12) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isString(12)).to.be.equal(false);</code></pre></dd>
+            <dt>JSCT.isString(&#x22;123&#x22;) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isString(&#x27;123&#x27;)).to.be.equal(true);</code></pre></dd>
+            <dt>JSCT.isString(null) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isString(null)).to.be.equal(false);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>getUUID&#x51FD;&#x6570;&#x83B7;&#x5F97;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x552F;&#x4E00;&#x5B57;&#x7B26;&#x4E32;</h1>
+          <dl>
+            <dt>JSCT.getUUID(32).length &#x7ED3;&#x679C;&#x4E3A; 32</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.getUUID(32).length).to.be.equal(32);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>sprintf&#x51FD;&#x6570;&#x628A;&#x683C;&#x5F0F;&#x6570;&#x636E;&#x5199;&#x6210;&#x4E32;</h1>
+          <dl>
+            <dt>JSCT.sprintf(&#x27;&#x4F60;&#x597D;%s&#xFF0C;&#x4F60;&#x4E86;&#x89E3;%s&#x5417;&#xFF1F;&#x27;, &#x27;Jack&#x27;, &#x27;Mocha&#x27;) &#x7ED3;&#x679C;&#x4E3A;&#xFF1A; &#x27;&#x4F60;&#x597D;Jack&#xFF0C;&#x4F60;&#x4E86;&#x89E3;Mocha&#x5417;&#xFF1F;&#x27;</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.sprintf(&#x27;&#x4F60;&#x597D;%s&#xFF0C;&#x4F60;&#x4E86;&#x89E3;%s&#x5417;&#xFF1F;&#x27;, &#x27;Jack&#x27;, &#x27;Mocha&#x27;)).to.be.equal(&#x27;&#x4F60;&#x597D;Jack&#xFF0C;&#x4F60;&#x4E86;&#x89E3;Mocha&#x5417;&#xFF1F;&#x27;);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isCreditCard&#x51FD;&#x6570;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x4FE1;&#x7528;&#x5361;</h1>
+          <dl>
+            <dt>JSCT.isCreditCard(&#x27;5212345678901234&#x27;) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isCreditCard(&#x27;5212345678901234&#x27;)).to.be.equal(true);</code></pre></dd>
+            <dt>JSCT.isCreditCard(&#x27;1212345678901234&#x27;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isCreditCard(&#x27;1212345678901234&#x27;)).to.be.equal(false);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isEmail&#x51FD;&#x6570;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x6B63;&#x786E;&#x90AE;&#x7BB1;</h1>
+          <dl>
+            <dt>JSCT.isEmail(&#x27;liufulin90@163.com&#x27;) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isEmail(&#x27;liufulin90@163.com&#x27;)).to.be.equal(true);</code></pre></dd>
+            <dt>JSCT.isEmail(&#x27;1212345678.901234&#x27;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isEmail(&#x27;1212345678.901234&#x27;)).to.be.equal(false);</code></pre></dd>
+            <dt>JSCT.isEmail(&#x27;1212345678@9012.123&#x27;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isEmail(&#x27;1212345678@9012.123&#x27;)).to.be.equal(false);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isUrl&#x51FD;&#x6570;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;url</h1>
+          <dl>
+            <dt>JSCT.isUrl(&#x27;http://fen.linxins.com&#x27;) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isUrl(&#x27;http://fen.linxins.com&#x27;)).to.be.equal(true);</code></pre></dd>
+            <dt>JSCT.isUrl(&#x27;http://fen.linxins.com/#wechatSubscriptionItem&#x27;) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isUrl(&#x27;http://fen.linxins.com/#wechatSubscriptionItem&#x27;)).to.be.equal(true);</code></pre></dd>
+            <dt>JSCT.isUrl(&#x27;liufulin90@163.com&#x27;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isUrl(&#x27;liufulin90@163.com&#x27;)).to.be.equal(false);</code></pre></dd>
+            <dt>JSCT.isUrl(&#x27;fff://baidu.com&#x27;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isUrl(&#x27;fff://baidu.com&#x27;)).to.be.equal(false);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isPhone&#x51FD;&#x6570;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x624B;&#x673A;&#x53F7;</h1>
+          <dl>
+            <dt>JSCT.isPhone(18782943043) &#x7ED3;&#x679C;&#x4E3A; true</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isPhone(18782943043)).to.be.equal(true);</code></pre></dd>
+            <dt>JSCT.isPhone(19012546653) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isPhone(19012546653)).to.be.equal(false);</code></pre></dd>
+            <dt>JSCT.isPhone(256448) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isPhone(256448)).to.be.equal(false);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>isIdentityCard&#x51FD;&#x6570;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;</h1>
+          <dl>
+            <dt>JSCT.isIdentityCard(&#x27;411324199010153310&#x27;) &#x7ED3;&#x679C;&#x4E3A; false</dt>
+            <dd><pre><code>(0, _chai.expect)(JSCT.isIdentityCard(&#x27;411324199010153310&#x27;)).to.be.equal(false);</code></pre></dd>
+          </dl>
+        </section>
+      </dl>
+    </section>

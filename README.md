@@ -83,6 +83,9 @@ JS ES6 writing tools based on function
 - [getFurtureWeeksInfo 获得指定日期的未来十周信息](#getfurtureweeksinfo)
 - [getMonthStartEndtDayTimestamp 获取指定时间所在月份的第一天开始时刻和最后一天最后时刻的时间戳（秒）](#getmonthstartendtdaytimestamp)
 
+> 自动化测试
+- [测试结果](#testresult)
+
 ## 详细函数及方法
 ###  Is JS判断函数
 #### isNumber
@@ -264,10 +267,13 @@ JSCT.inArray(1, [1, 'ss'], true) // true
  * 判断数组是否有重复值
  *
  * @param arr 需要判断的数组
+ * @param strict： 严格模式true，非严格false
  * @returns {boolean} ture: 有重复值  false: 没有重复值
  */
 console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5])); // false
 console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, 2])); // true
+console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, "2"])); // true
+console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, "2"], true)); // false
 ``` 
      
 ### Number
@@ -635,8 +641,241 @@ console.log(JSCT.getMonthStartEndtDayTimestamp(1500431715)) // { start: 14988384
 console.log(JSCT.timestampFormat(JSCT.getMonthStartEndtDayTimestamp(1500431715).start, 'Y-m-d H:i:s')) // 2017-07-01 00:00:00
 console.log(JSCT.timestampFormat(JSCT.getMonthStartEndtDayTimestamp(1500431715).end, 'Y-m-d H:i:s')) // 2017-07-31 23:59:59
 ```
+#### testResult
+
+自动化测试结果
+<pre>
+  Array相关函数测试
+    数组去重, arrayUnique 函数
+      ✓ JSCT.arrayUnique([3, 55, {a: 1}, 7, {a: 1}, {b: 2}, 55]) 结果为 [3, 55, { a: 1 }, 7, {b: 2}]
+      ✓ JSCT.arrayUnique([5, 3, 55, {a: 1}, 77, 55]) 结果为 [5, 3, 55, { a: 1 }, 77]
+      ✓ JSCT.arrayUnique([5, 3, [8, 8, {b: 1}], 55, [8, 8, {b: 1}], {a: 1}, 3, {a: 1}, 77, 55, 99]) 结果为 [5, 3, [ 8, 8, { b: 1 } ], 55, { a: 1 }, 77, 99]
+    对数组进行排序（默认升序）, arrayQuickSort 函数
+      ✓ JSCT.arrayUnique([5, 3, 55, 3, 77, 55, 99, 2, 4]) 升序结果为 [2, 3, 3, 4, 5, 55, 55, 77, 99]
+      ✓ JSCT.arrayUnique([5, 3, 55, 3, 77, 55, 99, 2, 4], "desc") 将序结果为 [99, 77, 55, 55, 5, 4, 3, 3, 2]
+      ✓ [5, 3, 55, 3, 77, 55, 99, 2, 4].arrayQuickSort("desc") 将序结果为 [99, 77, 55, 55, 5, 4, 3, 3, 2]
+    isArray函数判断是否为数组
+      ✓ JSCT.isArray([5]) 结果为 true
+      ✓ JSCT.isArray([]) 结果为 true
+      ✓ JSCT.isArray({}) 结果为 false
+    inArray函数判断值是否在数组中
+      ✓ JSCT.inArray(3, [3, 5]) 结果为 true
+      ✓ JSCT.inArray("3", [3, 5]) 结果为 true   非严格模式
+      ✓ JSCT.inArray("3", [3, 5], true) 结果为 false   严格模式
+    arrayIsRepeat函数判断数组是否有重复值
+      ✓ JSCT.arrayIsRepeat([3, 5]) 结果为 false
+      ✓ JSCT.arrayIsRepeat([3, 3, 5]) 结果为 true   非严格模式
+      ✓ JSCT.arrayIsRepeat([3, "3", 5]) 结果为 false   严格模式
+
+  JS判断函数，解决80%类型判断问题
+    isNumber 函数
+      ✓ JSCT.isNumber(100) 结果为 true
+      ✓ JSCT.isNumber("12") 结果为 false
+    isBoolean 函数
+      ✓ JSCT.isBoolean(true) 结果为 true
+      ✓ JSCT.isBoolean("12") 结果为 false
+    isString 函数
+      ✓ JSCT.isString("sss") 结果为 true
+      ✓ JSCT.isString(true) 结果为 false
+    isNull 函数
+      ✓ JSCT.isNull(null) 结果为 true
+      ✓ JSCT.isNull("123") 结果为 false
+      ✓ JSCT.isNull(true) 结果为 false
+    isUndefined 函数
+      ✓ JSCT.isUndefined() 结果为 true
+      ✓ JSCT.isUndefined("") 结果为 false
+      ✓ JSCT.isUndefined(null) 结果为 false
+      ✓ JSCT.isUndefined(0) 结果为 false
+    isObject 函数
+      ✓ JSCT.isObject() 结果为 false
+      ✓ JSCT.isObject("") 结果为 false
+      ✓ JSCT.isObject(null) 结果为 true
+      ✓ JSCT.isObject({}) 结果为 true
+      ✓ JSCT.isObject([1]) 结果为 true
+    isFunction 函数
+      ✓ JSCT.isFunction() 结果为 false
+      ✓ JSCT.isFunction(function () {}) 结果为 true
+
+  Number相关函数测试
+    getRandomInt函数获取指定区间随机数值
+      ✓ JSCT.getRandomInt(1, 100) 结果小于100大于1
+      ✓ JSCT.getRandomInt(500, 600) 结果小于600大于500
+    toFixedDecimal函数返回指定小数位数的十进制，默认两位小数（四舍五入）
+      ✓ JSCT.toFixedDecimal(1.689442324, 2) 结果为1.69
+      ✓ JSCT.toFixedDecimal(1.681142324, 3) 结果为1.681
+      ✓ JSCT.toFixedDecimal(1.681152324, 4) 结果为1.6812
+    isPrice函数判断是否为正确金额
+      ✓ JSCT.isPrice(11.35) 结果为 true
+      ✓ JSCT.isPrice(9.3) 结果为 true
+      ✓ JSCT.isPrice(1.689) 结果为 false
+      ✓ JSCT.isPrice("123#d") 结果为 false
+
+  字符串相关函数测试
+    trim去除空格函数测试
+      ✓ 清除字符中所有空格，"a b c d ".trimAll()结果为"abcd"
+      ✓ 清除字符中中左边空格，"   a b c d".trimL()结果为"a b c d"
+      ✓ 清除字符中中右边空格，"a b c d   ".trimR()结果为"a b c d"
+    isNullOrEmpty函数判断是否为空
+      ✓ JSCT.isNullOrEmpty(0) 结果为 true
+      ✓ JSCT.isNullOrEmpty(1) 结果为 false
+      ✓ JSCT.isNullOrEmpty("") 结果为 true
+      ✓ JSCT.isNullOrEmpty([]) 结果为 false
+      ✓ JSCT.isNullOrEmpty([], true) 结果为 true。 (ps: 递归检查，检查内部值)
+      ✓ JSCT.isNullOrEmpty([""]) 结果为 false
+      ✓ JSCT.isNullOrEmpty([""], true) 结果为 false。 (ps: 递归检查，检查内部值)
+      ✓ JSCT.isNullOrEmpty([null]) 结果为 false
+      ✓ JSCT.isNullOrEmpty([null], true) 结果为 true。 (ps: 递归检查，检查内部值)
+      ✓ JSCT.isNullOrEmpty({}) 结果为 false 
+      ✓ JSCT.isNullOrEmpty({}, true) 结果为 true。 (ps: 递归检查，检查内部值)
+    isString函数判断是否为字符串
+      ✓ JSCT.isString("") 结果为 true
+      ✓ JSCT.isString(12) 结果为 false
+      ✓ JSCT.isString("123") 结果为 true
+      ✓ JSCT.isString(null) 结果为 false
+    getUUID函数获得指定长度的唯一字符串
+      ✓ JSCT.getUUID(32).length 结果为 32
+    sprintf函数把格式数据写成串
+      ✓ JSCT.sprintf('你好%s，你了解%s吗？', 'Jack', 'Mocha') 结果为： '你好Jack，你了解Mocha吗？'
+    isCreditCard函数判断是否为信用卡
+      ✓ JSCT.isCreditCard('5212345678901234') 结果为 true
+      ✓ JSCT.isCreditCard('1212345678901234') 结果为 false
+    isEmail函数判断是否为正确邮箱
+      ✓ JSCT.isEmail('liufulin90@163.com') 结果为 true
+      ✓ JSCT.isEmail('1212345678.901234') 结果为 false
+      ✓ JSCT.isEmail('1212345678@9012.123') 结果为 false
+    isUrl函数判断是否为url
+      ✓ JSCT.isUrl('http://fen.linxins.com') 结果为 true
+      ✓ JSCT.isUrl('http://fen.linxins.com/#wechatSubscriptionItem') 结果为 true
+      ✓ JSCT.isUrl('liufulin90@163.com') 结果为 false
+      ✓ JSCT.isUrl('fff://baidu.com') 结果为 false
+    isPhone函数判断是否为手机号
+      ✓ JSCT.isPhone(18782943043) 结果为 true
+      ✓ JSCT.isPhone(19012546653) 结果为 false
+      ✓ JSCT.isPhone(256448) 结果为 false
+    isIdentityCard函数判断是否为身份证号码
+      ✓ JSCT.isIdentityCard('411324199010153310') 结果为 false
+
+
+  77 passing (28ms)
+
+
+
+  Array相关函数测试
+    数组去重, arrayUnique 函数
+      ✓ JSCT.arrayUnique([3, 55, {a: 1}, 7, {a: 1}, {b: 2}, 55]) 结果为 [3, 55, { a: 1 }, 7, {b: 2}]
+      ✓ JSCT.arrayUnique([5, 3, 55, {a: 1}, 77, 55]) 结果为 [5, 3, 55, { a: 1 }, 77]
+      ✓ JSCT.arrayUnique([5, 3, [8, 8, {b: 1}], 55, [8, 8, {b: 1}], {a: 1}, 3, {a: 1}, 77, 55, 99]) 结果为 [5, 3, [ 8, 8, { b: 1 } ], 55, { a: 1 }, 77, 99]
+    对数组进行排序（默认升序）, arrayQuickSort 函数
+      ✓ JSCT.arrayUnique([5, 3, 55, 3, 77, 55, 99, 2, 4]) 升序结果为 [2, 3, 3, 4, 5, 55, 55, 77, 99]
+      ✓ JSCT.arrayUnique([5, 3, 55, 3, 77, 55, 99, 2, 4], "desc") 将序结果为 [99, 77, 55, 55, 5, 4, 3, 3, 2]
+      ✓ [5, 3, 55, 3, 77, 55, 99, 2, 4].arrayQuickSort("desc") 将序结果为 [99, 77, 55, 55, 5, 4, 3, 3, 2]
+    isArray函数判断是否为数组
+      ✓ JSCT.isArray([5]) 结果为 true
+      ✓ JSCT.isArray([]) 结果为 true
+      ✓ JSCT.isArray({}) 结果为 false
+    inArray函数判断值是否在数组中
+      ✓ JSCT.inArray(3, [3, 5]) 结果为 true
+      ✓ JSCT.inArray("3", [3, 5]) 结果为 true   非严格模式
+      ✓ JSCT.inArray("3", [3, 5], true) 结果为 false   严格模式
+    arrayIsRepeat函数判断数组是否有重复值
+      ✓ JSCT.arrayIsRepeat([3, 5]) 结果为 false
+      ✓ JSCT.arrayIsRepeat([3, 3, 5]) 结果为 true   非严格模式
+      ✓ JSCT.arrayIsRepeat([3, "3", 5]) 结果为 false   严格模式
+
+  JS判断函数，解决80%类型判断问题
+    isNumber 函数
+      ✓ JSCT.isNumber(100) 结果为 true
+      ✓ JSCT.isNumber("12") 结果为 false
+    isBoolean 函数
+      ✓ JSCT.isBoolean(true) 结果为 true
+      ✓ JSCT.isBoolean("12") 结果为 false
+    isString 函数
+      ✓ JSCT.isString("sss") 结果为 true
+      ✓ JSCT.isString(true) 结果为 false
+    isNull 函数
+      ✓ JSCT.isNull(null) 结果为 true
+      ✓ JSCT.isNull("123") 结果为 false
+      ✓ JSCT.isNull(true) 结果为 false
+    isUndefined 函数
+      ✓ JSCT.isUndefined() 结果为 true
+      ✓ JSCT.isUndefined("") 结果为 false
+      ✓ JSCT.isUndefined(null) 结果为 false
+      ✓ JSCT.isUndefined(0) 结果为 false
+    isObject 函数
+      ✓ JSCT.isObject() 结果为 false
+      ✓ JSCT.isObject("") 结果为 false
+      ✓ JSCT.isObject(null) 结果为 true
+      ✓ JSCT.isObject({}) 结果为 true
+      ✓ JSCT.isObject([1]) 结果为 true
+    isFunction 函数
+      ✓ JSCT.isFunction() 结果为 false
+      ✓ JSCT.isFunction(function () {}) 结果为 true
+
+  Number相关函数测试
+    getRandomInt函数获取指定区间随机数值
+      ✓ JSCT.getRandomInt(1, 100) 结果小于100大于1
+      ✓ JSCT.getRandomInt(500, 600) 结果小于600大于500
+    toFixedDecimal函数返回指定小数位数的十进制，默认两位小数（四舍五入）
+      ✓ JSCT.toFixedDecimal(1.689442324, 2) 结果为1.69
+      ✓ JSCT.toFixedDecimal(1.681142324, 3) 结果为1.681
+      ✓ JSCT.toFixedDecimal(1.681152324, 4) 结果为1.6812
+    isPrice函数判断是否为正确金额
+      ✓ JSCT.isPrice(11.35) 结果为 true
+      ✓ JSCT.isPrice(9.3) 结果为 true
+      ✓ JSCT.isPrice(1.689) 结果为 false
+      ✓ JSCT.isPrice("123#d") 结果为 false
+
+  String相关函数测试
+    trim去除空格函数测试
+      ✓ 清除字符中所有空格，"a b c d ".trimAll()结果为"abcd"
+      ✓ 清除字符中中左边空格，"   a b c d".trimL()结果为"a b c d"
+      ✓ 清除字符中中右边空格，"a b c d   ".trimR()结果为"a b c d"
+    isNullOrEmpty函数判断是否为空
+      ✓ JSCT.isNullOrEmpty(0) 结果为 true
+      ✓ JSCT.isNullOrEmpty(1) 结果为 false
+      ✓ JSCT.isNullOrEmpty("") 结果为 true
+      ✓ JSCT.isNullOrEmpty([]) 结果为 false
+      ✓ JSCT.isNullOrEmpty([], true) 结果为 true。 (ps: 递归检查，检查内部值)
+      ✓ JSCT.isNullOrEmpty([""]) 结果为 false
+      ✓ JSCT.isNullOrEmpty([""], true) 结果为 false。 (ps: 递归检查，检查内部值)
+      ✓ JSCT.isNullOrEmpty([null]) 结果为 false
+      ✓ JSCT.isNullOrEmpty([null], true) 结果为 true。 (ps: 递归检查，检查内部值)
+      ✓ JSCT.isNullOrEmpty({}) 结果为 false 
+      ✓ JSCT.isNullOrEmpty({}, true) 结果为 true。 (ps: 递归检查，检查内部值)
+    isString函数判断是否为字符串
+      ✓ JSCT.isString("") 结果为 true
+      ✓ JSCT.isString(12) 结果为 false
+      ✓ JSCT.isString("123") 结果为 true
+      ✓ JSCT.isString(null) 结果为 false
+    getUUID函数获得指定长度的唯一字符串
+      ✓ JSCT.getUUID(32).length 结果为 32
+    sprintf函数把格式数据写成串
+      ✓ JSCT.sprintf('你好%s，你了解%s吗？', 'Jack', 'Mocha') 结果为： '你好Jack，你了解Mocha吗？'
+    isCreditCard函数判断是否为信用卡
+      ✓ JSCT.isCreditCard('5212345678901234') 结果为 true
+      ✓ JSCT.isCreditCard('1212345678901234') 结果为 false
+    isEmail函数判断是否为正确邮箱
+      ✓ JSCT.isEmail('liufulin90@163.com') 结果为 true
+      ✓ JSCT.isEmail('1212345678.901234') 结果为 false
+      ✓ JSCT.isEmail('1212345678@9012.123') 结果为 false
+    isUrl函数判断是否为url
+      ✓ JSCT.isUrl('http://fen.linxins.com') 结果为 true
+      ✓ JSCT.isUrl('http://fen.linxins.com/#wechatSubscriptionItem') 结果为 true
+      ✓ JSCT.isUrl('liufulin90@163.com') 结果为 false
+      ✓ JSCT.isUrl('fff://baidu.com') 结果为 false
+    isPhone函数判断是否为手机号
+      ✓ JSCT.isPhone(18782943043) 结果为 true
+      ✓ JSCT.isPhone(19012546653) 结果为 false
+      ✓ JSCT.isPhone(256448) 结果为 false
+    isIdentityCard函数判断是否为身份证号码
+      ✓ JSCT.isIdentityCard('411324199010153310') 结果为 false
+
+
+  77 passing (19ms)
+</pre>
+
 
 ## License
 (The MIT License)
 
-Copyright (c) 2016 [linxins](http://www.linxins.com) <liufulin90@163.com>
+Copyright (c) 2016 [linxins](http://www.linxins.com)  [React电子书阅读器](http://myreader.linxins.com) <liufulin90@163.com>

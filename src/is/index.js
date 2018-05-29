@@ -16,7 +16,7 @@ export function isString(x) {
 }
 
 export function isNull(x) {
-    return type(x) === 'null'
+    return x === null && type(x) === 'object'
 }
 
 export function isUndefined(x) {

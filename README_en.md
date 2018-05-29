@@ -103,10 +103,13 @@ via npm:
  * check array is repeat 
  *
  * @param arr 
+ * @param strict
  * @returns {boolean}
  */
 console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5])); // false
 console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, 2])); // true
+console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, "2"])); // true
+console.log(JSCT.arrayIsRepeat([1, 2, 3, 4, 5, "2"], true)); // false
 ``` 
 
 ### Number

@@ -1,10 +1,14 @@
 {
   "name": "js-common-tools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "基于JS ES6 写法相关工具函数",
   "main": "lib/index.js",
   "scripts": {
     "test": "babel-node test/index.js",
+    "mocha": "./node_modules/mocha/bin/mocha test/script/*.js  --watch --compilers js:babel-core/register",
+    "mocha-markdown": "./node_modules/mocha/bin/mocha test/script/*.js --compilers js:babel-core/register --recursive -R markdown > test/report/spec.md",
+    "mocha-html": "./node_modules/mocha/bin/mocha test/script/*.js --compilers js:babel-core/register --recursive -R doc > test/report/spec.html",
+    "report": "npm run mocha-markdown && npm run mocha-html",
     "p": "babel src -d lib",
     "c": "eslint src",
     "ccp": "eslint src && rm -rf ./lib/* && babel src -d lib && webpack",
@@ -30,6 +34,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
     "babel-runtime": "^6.22.0",
+    "chai": "^4.1.2",
     "cross-env": "^3.1.4",
     "cross-spawn": "^5.0.1",
     "eslint": "^3.14.1",
@@ -41,6 +46,7 @@
     "eslint-plugin-standard": "^2.0.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.1",
+    "mocha": "^5.2.0",
     "webpack": "^3.4.1"
   },
   "author": "linxins",
