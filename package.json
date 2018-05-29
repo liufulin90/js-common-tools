@@ -9,9 +9,9 @@
     "mocha-markdown": "./node_modules/mocha/bin/mocha test/script/*.js --compilers js:babel-core/register --recursive -R markdown > test/report/spec.md",
     "mocha-html": "./node_modules/mocha/bin/mocha test/script/*.js --compilers js:babel-core/register --recursive -R doc > test/report/spec.html",
     "report": "npm run mocha-markdown && npm run mocha-html",
-    "p": "babel src -d lib",
-    "c": "eslint src",
-    "ccp": "eslint src && rm -rf ./lib/* && babel src -d lib && webpack",
+    "babel": "babel src -d lib",
+    "eslint": "eslint src",
+    "publish": "eslint src && rm -rf ./lib/* && babel src -d lib && webpack",
     "clear": "rm -rf ./lib/*"
   },
   "repository": {
