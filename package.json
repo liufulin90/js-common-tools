@@ -11,7 +11,7 @@
     "report": "npm run mocha-markdown && npm run mocha-html",
     "babel": "babel src -d lib",
     "eslint": "eslint src",
-    "publish": "eslint src && rm -rf ./lib/* && babel src -d lib && webpack",
+    "release": "eslint src && rm -rf ./lib/* && babel src -d lib && webpack",
     "clear": "rm -rf ./lib/*"
   },
   "repository": {
