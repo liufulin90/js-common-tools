@@ -4,7 +4,7 @@
 import {arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat} from './array/'
 
 /** number all tools */
-import {getRandomInt, toFixedDecimal, isPrice} from './number/'
+import {getRandomInt, toFixedDecimal, isPrice, isPrimes, getPrimes} from './number/'
 
 /**
  * string all tools
@@ -23,11 +23,11 @@ import {sleep, getImageWidthHeight} from './other/'
 import {isNumber, isBoolean, isNull, isUndefined, isObject, isFunction} from './is/'
 /**
  * include all function to jsct object
- * @type {{arrayUnique: arrayUnique, arrayQuickSort: arrayQuickSort, isArray: isArray, inArray: inArray, getRandomInt: getRandomInt, toFixedDecimal: toFixedDecimal, getUUID: getUUID, isNullOrEmpty: isNullOrEmpty, isString: isString, isCreditCard: isCreditCard, isEmail: isEmail, isUrl: isUrl, isIdentityCard: isIdentityCard, sprintf: sprintf, cookie: cookie, getLocalStorage: getLocalStorage, setLocalStorage: setLocalStorage, getSessionStorage: getSessionStorage, setSessionStorage: setSessionStorage, Timer: Timer}}
+ * @type {{arrayUnique: arrayUnique, arrayQuickSort: arrayQuickSort, isArray: isArray, inArray: inArray, getRandomInt: getRandomInt, toFixedDecimal: toFixedDecimal, isPrice: isPrice, isPrimes: isPrimes, getUUID: getUUID, isNullOrEmpty: isNullOrEmpty, isString: isString, isCreditCard: isCreditCard, isEmail: isEmail, isUrl: isUrl, isIdentityCard: isIdentityCard, sprintf: sprintf, cookie: cookie, getLocalStorage: getLocalStorage, setLocalStorage: setLocalStorage, getSessionStorage: getSessionStorage, setSessionStorage: setSessionStorage, Timer: Timer}}
  */
 export {
   arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat,
-  getRandomInt, toFixedDecimal, isPrice,
+  getRandomInt, toFixedDecimal, isPrice, isPrimes, getPrimes,
   getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
   cookie,
   getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
@@ -38,7 +38,7 @@ export {
 
 (function() {
   var JSCT = {arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat,
-    getRandomInt, toFixedDecimal, isPrice,
+    getRandomInt, toFixedDecimal, isPrice, isPrimes, getPrimes,
     getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
     cookie,
     getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,

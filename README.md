@@ -44,6 +44,7 @@ JS ES6 writing tools based on function
 
 > Is JS判断函数
 - [isNumber 判断是否为数字](#isnumber)
+- [isPrimes 判断一个数是否为素数（质数）](#isprimes)
 - [isBoolean 判断是否为布尔](#isboolean)
 - [isString 判断是否为字符串](#isstring)
 - [isNull 判断是否是null](#isnull)
@@ -68,6 +69,8 @@ JS ES6 writing tools based on function
 - [getRandomInt 获得指定区间的随机整数](#getrandomint)
 - [toFixedDecimal 返回指定小数位数的十进制](#tofixeddecimal)
 - [isPrice 判断是否为正确金额](#isprice)
+- [getPrimes 获取两个数之间的所有素数（质数）](#getprimes)
+
 > String
 - [trimAll 清除字符中所有空格](#trimall)
 - [trimL 清除字符中左边空格](#triml)
@@ -109,6 +112,20 @@ JS ES6 writing tools based on function
  */
 JSCT.isNumber(1237)  // true
 ```
+#### isPrimes
+
+  判断一个数是否为素数（质数）
+```javascript
+/**
+ * 判断一个数是否为素数（质数）
+ * console.log(JSCT.isPrimes(9)); // false
+ * console.log(JSCT.isPrimes(97)); // true
+ * @param number
+ * @returns {boolean} true: 是素数 false: 不是素数
+ */
+JSCT.isPrimes(97)  // true
+```
+
 #### isBoolean
 
   判断是否为布尔
@@ -328,6 +345,21 @@ JSCT.toFixedDecimal(1.689442324, 2) // 1.68
  * @returns {boolean}
  */
 JSCT.isPrice('12.37')  // true
+```
+  
+#### getPrimes
+  
+  获取两个数之间的所有素数（质数）
+```javascript
+/**
+ * 获取两个数之间的所有素数（质数）
+ *
+ * 1到30的数中所有质数：console.log(JSCT.getPrimes(1, 30)) // 2,3,5,7,11,13,17,19,23,29
+ * @param start 开始数
+ * @param end 结束数
+ * @returns {*}
+ */
+JSCT.getPrimes(1, 30)  // 2,3,5,7,11,13,17,19,23,29
 ```
 
 ### String

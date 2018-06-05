@@ -36,5 +36,48 @@ describe('Number相关函数测试', function () {
       expect(JSCT.isPrice('123#d')).to.be.false;
     });
   })
+
+  describe('isPrimes函数判断一个数是否为素数（质数）', function () {
+    setTimeout(()=> {
+      function testPrimes(start = 1, end = 100) {
+        var
+          x,
+          arr = [];
+        for (x = start; x < end; x++) {
+          arr.push(x);
+        }
+        return get_primes(arr);
+      }
+      function get_primes(arr) {
+        var r = arr.filter(function (val) {
+          return JSCT.isPrimes(val);
+        });
+        return r;
+      }
+      console.log('100 ~ 110 所有质数: ' + testPrimes(100, 110).toString());
+    }, 100);
+
+    it('JSCT.isPrimes(1) 结果为 false', function () {
+      expect(JSCT.isPrimes(1)).to.be.false;
+    });
+    it('JSCT.isPrimes(9) 结果为 false', function () {
+      expect(JSCT.isPrimes(9)).to.be.false;
+    });
+    it('JSCT.isPrimes(5) 结果为 true', function () {
+      expect(JSCT.isPrimes(5)).to.be.ok;
+    });
+    it('JSCT.isPrimes(97) 结果为 true', function () {
+      expect(JSCT.isPrimes(97)).to.be.ok;
+    });
+    it('JSCT.isPrimes(109) 结果为 true', function () {
+      expect(JSCT.isPrimes(109)).to.be.ok;
+    });
+  })
+
+  describe('getPrimes函数获取两个数之间的所有素数（质数）', function () {
+    it('JSCT.getPrimes(1, 30) 1到30的数中所有质数： 2,3,5,7,11,13,17,19,23,29', function () {
+      expect(JSCT.getPrimes(1, 30).toString()).to.be.equal('2,3,5,7,11,13,17,19,23,29');
+    });
+  })
 })
 
