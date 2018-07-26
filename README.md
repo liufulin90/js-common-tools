@@ -28,7 +28,9 @@ JS ES6 writing tools based on function
 
 如果直接引入的是 `lib/js-common-tools.xxx.js` 的话，所有的函数都已经全部注入到 `window` 对象中。
 其中函数有一个前缀 `js_`，目的是避免跟其他框架函数有所冲突。 
-
+```html
+<script src="lib/js-common-tools.xxx.js"></script>
+```
 调用示例：
 ```javascript
   js_isEmail('liufulin90@163.com'); // true
