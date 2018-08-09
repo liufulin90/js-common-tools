@@ -4,7 +4,7 @@
 import {arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat} from './array/'
 
 /** number all tools */
-import {getRandomInt, toFixedDecimal, isPrice, isPrimes, getPrimes} from './number/'
+import {getRandomInt, toFixedDecimal, isPrice, isPrimes, getPrimes, accAdd, accSub, accMul, accDiv} from './number/'
 
 /**
  * string all tools
@@ -27,7 +27,7 @@ import {isNumber, isBoolean, isNull, isUndefined, isObject, isFunction} from './
  */
 export {
   arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat,
-  getRandomInt, toFixedDecimal, isPrice, isPrimes, getPrimes,
+  getRandomInt, toFixedDecimal, isPrice, isPrimes, getPrimes, accAdd, accSub, accMul, accDiv,
   getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
   cookie,
   getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,
@@ -38,7 +38,7 @@ export {
 
 (function() {
   var JSCT = {arrayUnique, arrayQuickSort, isArray, inArray, arrayIsRepeat,
-    getRandomInt, toFixedDecimal, isPrice, isPrimes, getPrimes,
+    getRandomInt, toFixedDecimal, isPrice, isPrimes, getPrimes, accAdd, accSub, accMul, accDiv,
     getUUID, isNullOrEmpty, isString, isCreditCard, isEmail, isUrl, isPhone, isIdentityCard, sprintf,
     cookie,
     getLocalStorage, setLocalStorage, getSessionStorage, setSessionStorage,

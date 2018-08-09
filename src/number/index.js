@@ -1,7 +1,7 @@
 /**
  * Created by liufulin.
  */
-
+import {accAdd, accSub, accMul, accDiv} from './floatParse'
 /**
  * Returns a random int
  * 获取指定区间随机数值
@@ -108,5 +108,9 @@ export {
   toFixedDecimal,
   isPrice,
   isPrimes,
-  getPrimes
+  getPrimes,
+  accAdd,
+  accSub,
+  accMul,
+  accDiv
 }

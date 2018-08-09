@@ -79,5 +79,10 @@ describe('Number相关函数测试', function () {
       expect(JSCT.getPrimes(1, 30).toString()).to.be.equal('2,3,5,7,11,13,17,19,23,29');
     });
   })
+  describe('accAdd 函数得到正确的两个浮点数的和', function () {
+    it('JSCT.accAdd(0.1, 0.2) 之和等于 0.3', function () {
+      expect(JSCT.accAdd(0.1, 0.2)).to.be.equal(0.3);
+    });
+  })
 })
 
