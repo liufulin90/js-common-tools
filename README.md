@@ -72,6 +72,10 @@ JS ES6 writing tools based on function
 - [toFixedDecimal 返回指定小数位数的十进制](#tofixeddecimal)
 - [isPrice 判断是否为正确金额](#isprice)
 - [getPrimes 获取两个数之间的所有素数（质数）](#getprimes)
+- [accAdd 浮点数加法运算 0.1 + 0.2 = 0.3](#accadd)
+- [accSub 浮点数减法运算 0.5 - 0.4 = 0.1](#accsub)
+- [accMul 浮点数乘法运算 0.1 * 3 = 0.3](#accmul)
+- [accDiv 浮点数除法运算 0.3 / 3 = 0.1](#accdiv)
 
 > String
 - [trimAll 清除字符中所有空格](#trimall)
@@ -362,6 +366,58 @@ JSCT.isPrice('12.37')  // true
  * @returns {*}
  */
 JSCT.getPrimes(1, 30)  // 2,3,5,7,11,13,17,19,23,29
+```
+
+#### accAdd
+  
+  浮点数加法运算　0.1 + 0.2 = 0.3
+```javascript
+/**
+ * 浮点数加法运算 0.1 + 0.2 = 0.3
+ * JSCT.accAdd(0.1, 0.2) 之和等于 0.3 ，即（0.1 + 0.2 == 0.3） true
+ * @param num1
+ * @param num2
+ */
+JSCT.accAdd(0.1, 0.2)  // 0.3
+```
+
+#### accSub
+  
+  浮点数减法运算 0.5 - 0.4 = 0.1
+```javascript
+/**
+ * 浮点数减法运算 0.5 - 0.4 = 0.1
+ * JSCT.accSub(0.5, 0.4) 之差等于 0.1 ，即(0.5 - 0.4 == 0.1) true
+ * @param num1
+ * @param num2
+ */
+JSCT.accSub(0.5, 0.4)  // 0.1
+```
+
+#### accMul
+  
+  浮点数乘法运算 0.1 * 3 = 0.3
+```javascript
+/**
+ * 浮点数乘法运算 0.1 * 3 = 0.3
+ * JSCT.accMul(0.1, 3) 之积等于 0.3 ，即(0.1 * 3 == 0.3) true
+ * @param num1
+ * @param num2
+ */
+JSCT.accMul(0.1, 3)  // 0.3
+```
+
+#### accDiv
+  
+  浮点数除法运算 0.3 / 3 = 0.1
+```javascript
+/**
+ * 浮点数除法运算 0.3 / 3 = 0.1
+ * JSCT.accDiv(0.3, 3) 之商等于 0.1, 即(0.3 / 3 == 0.1) true
+ * @param num1
+ * @param num2
+ */
+JSCT.accDiv(0.3, 3)  // 0.1
 ```
 
 ### String
