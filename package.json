@@ -1,7 +1,7 @@
 {
   "name": "js-common-tools",
-  "version": "1.0.2",
-  "description": "基于JS ES6 写法相关工具函数",
+  "version": "1.0.3",
+  "description": "JS常用工具函数",
   "main": "lib/index.js",
   "scripts": {
     "test": "babel-node test/index.js",

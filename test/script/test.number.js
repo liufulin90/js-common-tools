@@ -80,8 +80,23 @@ describe('Number相关函数测试', function () {
     });
   })
   describe('accAdd 函数得到正确的两个浮点数的和', function () {
-    it('JSCT.accAdd(0.1, 0.2) 之和等于 0.3', function () {
+    it('JSCT.accAdd(0.1, 0.2) 之和等于 0.3 ，即（0.1 + 0.2 == 0.3） true', function () {
       expect(JSCT.accAdd(0.1, 0.2)).to.be.equal(0.3);
+    });
+  })
+  describe('accSub 函数得到正确的两个浮点数的差', function () {
+    it('JSCT.accSub(0.5, 0.4) 之差等于 0.1 ，即(0.5 - 0.4 == 0.1) true', function () {
+      expect(JSCT.accSub(0.5, 0.4)).to.be.equal(0.1);
+    });
+  })
+  describe('accMul 函数得到正确的两个浮点数的积', function () {
+    it('JSCT.accMul(0.1, 3) 之积等于 0.3 ，即(0.1 * 3 == 0.3) true', function () {
+      expect(JSCT.accMul(0.1, 3)).to.be.equal(0.3);
+    });
+  })
+  describe('accDiv 函数得到正确的两个浮点数的商', function () {
+    it('JSCT.accDiv(0.3, 3) 之商等于 0.1, 即(0.3 / 3 == 0.1) true', function () {
+      expect(JSCT.accDiv(0.3, 3)).to.be.equal(0.1);
     });
   })
 })

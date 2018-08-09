@@ -1,10 +1,16 @@
 /**
  * 原因: 在计算机二进制无法正确表示十进制的 0.1 ，因此需要做相关转换
  * 此文件中方法是解决js中浮点数 0.1 无法正确的运算。
+ * 未处理之前为如下结果
+ * 0.1 + 0.2 == 0.3 》 false
+ * 0.5 - 0.4 == 0.1 》 false
+ * 0.1 * 3 == 0.3 》 false
+ * 0.3 / 3 == 0.1 》 false
  */
 
 /**
- * 加法运算 0.1 + 0.2 = 0.3
+ * 浮点数加法运算 0.1 + 0.2 = 0.3
+ * JSCT.accAdd(0.1, 0.2) 之和等于 0.3 ，即（0.1 + 0.2 == 0.3） true
  * @param num1
  * @param num2
  */
@@ -28,7 +34,8 @@ const accAdd = function (num1, num2) {
 }
 
 /**
- * 减法运算
+ * 浮点数减法运算 0.5 - 0.4 = 0.1
+ * JSCT.accSub(0.5, 0.4) 之差等于 0.1 ，即(0.5 - 0.4 == 0.1) true
  * @param num1
  * @param num2
  */
@@ -52,7 +59,31 @@ const accSub = function (num1, num2) {
 }
 
 /**
- * 除法运算
+ * 浮点数乘法运算 0.1 * 3 = 0.3
+ * JSCT.accMul(0.1, 3) 之积等于 0.3 ，即(0.1 * 3 == 0.3) true
+ * @param num1
+ * @param num2
+ */
+const accMul = function (num1, num2) {
+  num1 = Number(num1)
+  num2 = Number(num2)
+  var times = 0
+  let s1 = num1.toString()
+  let s2 = num2.toString()
+  try {
+    times += countDecimals(s1)
+  } catch (e) {
+  }
+  try {
+    times += countDecimals(s2)
+  } catch (e) {
+  }
+  var result = convertToInt(s1) * convertToInt(s2) / Math.pow(10, times)
+  return getCorrectResult('mul', num1, num2, result)
+}
+/**
+ * 浮点数除法运算 0.3 / 3 = 0.1
+ * JSCT.accDiv(0.3, 3) 之商等于 0.1, 即(0.3 / 3 == 0.1) true
  * @param num1
  * @param num2
  */
@@ -74,28 +105,6 @@ const accDiv = function (num1, num2) {
   dec2 = convertToInt(num2)
   var result = accMul((dec1 / dec2), Math.pow(10, t2 - t1))
   return getCorrectResult('div', num1, num2, result)
-}
-/**
- * 乘法运算
- * @param num1
- * @param num2
- */
-const accMul = function (num1, num2) {
-  num1 = Number(num1)
-  num2 = Number(num2)
-  var times = 0
-  let s1 = num1.toString()
-  let s2 = num2.toString()
-  try {
-    times += countDecimals(s1)
-  } catch (e) {
-  }
-  try {
-    times += countDecimals(s2)
-  } catch (e) {
-  }
-  var result = convertToInt(s1) * convertToInt(s2) / Math.pow(10, times)
-  return getCorrectResult('mul', num1, num2, result)
 }
 
 /**
